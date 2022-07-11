@@ -1,0 +1,15 @@
+.bigContainer {
+    font-size: 16px;
+}
+
+.containerSkillList {
+    display: flex;
+    justify-content: center;
+}
+
+.skillListElement {
+    font-size: 1rem;
+    border: 0.15rem solid black;
+    border-radius: 0.3rem;
+    margin: 0.3rem;
+}
