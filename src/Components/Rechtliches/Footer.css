@@ -1,0 +1,27 @@
+.footerlinks {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    align-content: flex-end;
+    min-height: 1rem;
+}
+
+.footerlinks nav {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    align-content: flex-end;
+}
+
+.footerlinks nav ul {
+    display: inline;
+    font-size: clamp(1rem, 0.4rem + 4.5vw, 1.0rem);
+    padding: 0.5rem;
+}
+
+.footerlinks a {
+    text-decoration: none;
+    color: black;
+    transition-property: color;
+    transition-duration: 2s;
+}

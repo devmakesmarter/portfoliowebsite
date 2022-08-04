@@ -1,15 +1,42 @@
+html {
+    font-size: 16px;
+}
+
 .bigContainer {
     font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .containerSkillList {
     display: flex;
     justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    flex-wrap: wrap;
 }
 
 .skillListElement {
-    font-size: 1rem;
-    border: 0.15rem solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    font-size: 1.3rem;
+    border: 0.1rem solid black;
     border-radius: 0.3rem;
     margin: 0.3rem;
+    padding: 0.3rem;
+    min-height: 2.7rem;
+    min-width: 7rem;
+}
+
+.skillListElement:hover {
+    color: grey;
+}
+
+.fontAwesome {
+    text-align: center;
 }

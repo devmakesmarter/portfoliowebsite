@@ -40,7 +40,7 @@
 }
 
 .nav-links:hover {
-    background-color: #6d76;
+    background-color: rgb(92, 88, 88);
     border-radius: 4px;
     transition: all 0.2 ease-out;
 }
@@ -84,10 +84,10 @@
         padding: 2rem;
         width: 100%;
         display: table;
-        background: linear-gradient(90deg, hsla(0, 0%, 47%, 0.5) 75%, hsla(0, 0%, 47%, 0.5) 100%);
+        background: hsla(0, 0%, 20%, 1);
     }
     .nav-links:hover {
-        background-color: #6668f4;
+        background-color: rgb(92, 88, 88);
         border-radius: 0;
     }
     .navbar-logo {

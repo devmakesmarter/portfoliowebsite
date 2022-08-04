@@ -12,13 +12,14 @@ const handleClick =()=>{
 export const SkillsComponent = () => {
 
     return ( 
-    
+        <div>
         <div className="bigContainer">
             <div >
             <h1> Mein Fähigkeiten sind</h1>
+            <br></br>
             </div>
         
-            
+            </div>
 
             <div className="containerSkillList">
 
@@ -29,6 +30,8 @@ return <div key={key} className={prev.className} ><i className={prev.fontAwesome
 } )}
 
             </div>
+
+      
             
 
             
