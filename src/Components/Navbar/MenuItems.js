@@ -1,3 +1,7 @@
+// Hier werden  werden die entsprechende Daten für das Navigationsmenü geliefert. 
+
+
+
 export const menuItems = [{
         title: "Startseite",
         url: "/",
@@ -16,6 +20,6 @@ export const menuItems = [{
         cName: "nav-links"
 
     },
-
-
 ]
+
+export default menuItems

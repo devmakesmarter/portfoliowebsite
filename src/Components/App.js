@@ -9,6 +9,7 @@ import { Datenschutz } from "./Rechtliches/Datenschutz";
 import {Footer} from "../Components/Rechtliches/Footer";
 function App() {
 
+  
 
 
   return (
@@ -20,7 +21,7 @@ function App() {
     <Navbar/>
     <br></br>
     <SkillsComponent/>
-    <br></br>
+    <br></br> 
     <Quizapp/>
    
 

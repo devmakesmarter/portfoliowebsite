@@ -4,6 +4,24 @@ import {Questions} from "./Data";
 
  export const Quizapp = () => {
 
+    /* Das Quiz besteht aus mehreren Elementen.     
+    
+        1. einem Array mit Objekten welches in der Data.js gelagert ist. Die Data.js ist wie folgt aufgebaut. Eine Frage mit zwei Antwortmöglichkeiten. 
+           Es gibt jeweils die Antwort und ein Value für die Antwort. Bei der richtigen Antwort ist das Value true. 
+
+
+        2. Einem Array rightAnswer. Hier wird immer der Specialkey der Frage platziert, wenn Sie beantwortet wurde. Es gibt eine Filter Funktion für 
+           die const arrayAsibil. arrayAskibil nimmt alles aus dem Data.js außer die die schon beantwortet wurden. 
+           
+        3. const number generiert immer eine randomisierte Nummer. Sie orientiert sich dabei immer an der Länge des arrayAskibil. Somit wird gewährleistet, 
+           dass keine Nummer kommt, die in dem Array nicht vorhanden ist. 
+    
+    
+    */
+
+
+
+
     // hier kommt der Specialkey der richtig beantworteten Fragen hin
     const [rightAnswer, setrightAnswer ] = useState([]);
 
@@ -19,14 +37,14 @@ import {Questions} from "./Data";
 
     const [historicScore, setHistoricScore] = useState([]);
 
-    const checkEnd = arrayAskibil.length === 0;
+   
 
 
-    
+    // bei handleClick ist es wichtig, dass arrayAskibil.length >= 0, immer gleich oder größer null ist.  Wenn man statt der 0 eine Eins nimmt, geht das ganze nicht auf. 
  const handleClick = (e) => {
     const value = e.target.value; 
     const key = e.target.title;
-    const ul = score;
+    
 
     if(value === "true" && arrayAskibil.length >= 0){
 
@@ -55,7 +73,8 @@ else if(value === "false"){
 }
  }
 
-
+// Durch useEffect wird gewährleistet, dass immer wenn eine Frage beantwortet wird, dass Array neu sortiert wird. Bevor es in separiert wurde in useEffect, 
+// kamen einige Fragen doppelt vor. Es wurd enicht gewährleistet, dass jede Frage nur einmal vorkommt. 
  useEffect(() =>{
 
     setArrayAskibil(Questions.filter(prev => !rightAnswer.includes(prev.SpecialKey)));
@@ -78,7 +97,7 @@ else if(value === "false"){
 
 
  
-
+// arrayAskibil.length darf nicht -1 sonst kommen negative Zahlen und das Programm crasht. 
 const handleRestart = () => {
 
     setrightAnswer([]);
@@ -88,18 +107,11 @@ const handleRestart = () => {
 
 }
 
-console.log("Hi, schön dass Sie meine Website besuchen. ")
 
 
 
-/*
 
-{historicScore.map((prev)=>{
 
-      return <h2> Ihr Ergebnis in Runde ist{prev}  </h2>
-} )}
-
-*/
 
 return (
 
@@ -159,7 +171,4 @@ return (
 
     </div>
 )
-
-
-
 }

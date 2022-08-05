@@ -15,7 +15,7 @@
          SpecialKey: 2
      },
      {
-         Question: "In welchem Jahr wurde die HTML 5 Spezifikation vorgelegt?",
+         Question: "In welchem Jahr wurde die HTML 5 Spezifikation vorgestellt?",
          AnswerOne: "2014",
          AnswerOneValue: true,
          AnswerTwo: "2010",

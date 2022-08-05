@@ -1,3 +1,5 @@
+/*    Hier ist das CSS-Styling für die Navbar                   */
+
 .navbarItems {
     background: linear-gradient(90deg, hsla(0, 0%, 47%, 0.5) 0%, hsla(0, 0%, 5%, 0.5) 100%);
     display: flex;

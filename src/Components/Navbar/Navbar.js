@@ -9,7 +9,8 @@ export const Navbar = (props) => {
 
     const [menuIconState, setmenuIconState] = useState({ clicked: false});
 
-    // This handleMenuIconClick handle´s the Menu Logo
+
+        // handleMenuIconClick ist dafür zuständig, ob das Icon true oder false ist. Dementsprechend ändert sich die CSS-Klasse und damit gleichzeitig auch das Logo 
 
 const handleMenuIconClick = () => {
         if(menuIconState.clicked === false){
