@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../Quizapp/Quiz.css";
 import {Questions} from "./Data";
 
+
  export const Quizapp = () => {
 
     /* Das Quiz besteht aus mehreren Elementen.     
@@ -78,6 +79,12 @@ else if(value === "false"){
  useEffect(() =>{
 
     setArrayAskibil(Questions.filter(prev => !rightAnswer.includes(prev.SpecialKey)));
+    
+
+    return() => {
+        
+
+    }
 
  },[rightAnswer]);
 
@@ -109,66 +116,65 @@ const handleRestart = () => {
 
 
 
+const quizConti =  <div>
+{arrayAskibil.length === 0 ? 
 
+    (   
+    <div className="quizborderborder" >   
+    <div className="quizborder">
+
+    <h1>Herzlichen Glückwunsch Sie haben folgenden Punktestand erreicht:<br>
+    </br> {score}</h1>
+
+    <h3>Alle Fragen sind vorbei</h3>
+
+    <button  className="button" onClick={handleRestart}>Neustart</button>
+    <button  className="button" onClick={handlehistoricScore}>Punktestand speichern</button>
+
+        <div>
+            <h1>Ihre bisher erreichen Punktestände sind wie folgt:</h1>
+            {historicScore.map((prev,key)=>{
+
+     return <h2 key={key}> Ihr Ergebnis in Runde {key + 1} ist {prev}  </h2>
+     } )}
+        </div>
+        
+    </div>
+    </div>  
+     )  
+
+     :
+(
+<div>     
+
+
+<div className="projektdescription">
+    <h1>Projektbeschreibung</h1>
+    <p>Es handelt sich hierbei um ein Quiz welches ich selbst programmiert habe. Es ist mit dem Framework React.js programmiert. Ich vewende UseState und UseEffect Hook´s.  </p>
+</div>
+
+<div className="quizborderborder"id="Projektbeginn" >
+
+<div className="quizborder">
+    <h1>Ihr aktueller Punktestand ist: <br></br> {score}</h1>
+    <h3>{arrayAskibil[number].Question}</h3>
+    <button value={arrayAskibil[number].AnswerOneValue} className="button" title={arrayAskibil[number].SpecialKey}  onClick={handleClick}  >{arrayAskibil[number].AnswerOne}  </button>
+
+    <button value={arrayAskibil[number].AnswerTwoValue} className="button" title={arrayAskibil[number].SpecialKey}  onClick={handleClick}   >{arrayAskibil[number].AnswerTwo}</button>
+    
+</div>
+</div>
+</div>
+)  
+
+        }
+
+</div>;
 
 
 
 return (
-
-    <div>
-
-        {arrayAskibil.length === 0 ? 
-
-            (   
-            <div className="quizborderborder" >   
-            <div className="quizborder">
-
-            <h1>Herzlichen Glückwunsch Sie haben folgenden Punktestand erreicht:<br>
-            </br> {score}</h1>
-
-            <h3>Alle Fragen sind vorbei</h3>
-
-            <button  className="button" onClick={handleRestart}>Neustart</button>
-            <button  className="button" onClick={handlehistoricScore}>Punktestand speichern</button>
-
-                <div>
-                    <h1>Ihre bisher erreichen Punktestände sind wie folgt:</h1>
-                    {historicScore.map((prev,key)=>{
-
-             return <h2 key={key}> Ihr Ergebnis in Runde {key + 1} ist {prev}  </h2>
-             } )}
-                </div>
-                
-            </div>
-            </div>  
-             )  
-
-             :
-        (
-        <div>     
-
-
-        <div className="projektdescription">
-            <h1>Projektbeschreibung</h1>
-            <p>Es handelt sich hierbei um ein Quiz welches ich selbst programmiert habe. Es ist mit dem Framework React.js programmiert. Ich vewende UseState und UseEffect Hook´s.  </p>
-        </div>
-
-        <div className="quizborderborder"id="Projektbeginn" >
-
-        <div className="quizborder">
-            <h1>Ihr aktueller Punktestand ist: <br></br> {score}</h1>
-            <h3>{arrayAskibil[number].Question}</h3>
-            <button value={arrayAskibil[number].AnswerOneValue} className="button" title={arrayAskibil[number].SpecialKey}  onClick={handleClick}  >{arrayAskibil[number].AnswerOne}  </button>
-
-            <button value={arrayAskibil[number].AnswerTwoValue} className="button" title={arrayAskibil[number].SpecialKey}  onClick={handleClick}   >{arrayAskibil[number].AnswerTwo}</button>
-            
-        </div>
-        </div>
-        </div>
-        )  
-
-                }
-
-    </div>
+        <div>{quizConti}</div>
+        
 )
 }
