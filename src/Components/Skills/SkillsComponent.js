@@ -9,11 +9,15 @@ export const SkillsComponent = () => {
 
     console.log(" Hallo und herzlich Willkommen!");
 
+    
+
     return ( 
         <div>
         <div className="bigContainer">
             <div >
             <h1> Mein Fähigkeiten sind</h1>
+
+
             <br></br>
             </div>
             </div>

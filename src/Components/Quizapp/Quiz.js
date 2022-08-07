@@ -20,29 +20,33 @@ import {Questions} from "./Data";
     
     */
 
-
-
-
     // hier kommt der Specialkey der richtig beantworteten Fragen hin
     const [rightAnswer, setrightAnswer ] = useState([]);
 
     // arrayAskibil sind alle Fragen die in Questions enthalten sind, gefiltert um die schon richtig beantwortet wurden 
     const [arrayAskibil, setArrayAskibil] = useState(Questions.filter(prev => !rightAnswer.includes(prev.SpecialKey)));
     
-
     // number generiert sich aus der Länge des Array´s und soll gewährleisten, dass random Nummern kommen 
     const [number, setNumber] = useState(Math.floor(Math.random() * (arrayAskibil.length-1)));
-
-
+    // score und historicScore sind der jeweilige Punktestand
     const [score, setScore] = useState(0);
 
     const [historicScore, setHistoricScore] = useState([]);
 
-   
+   // Diese Variable sorgt für den Quizstart 
+   const [vorBeginn, setVorBeginn] = useState(false);
+
+    // Das ist der Countdownmechanismus
+    const [countdown, setCountdown] = useState(20);
+
+    // Dies Variable entscheidet, ob der Countdownaktiviert werden soll. 
+
+    const [shouldCountdownStart, setShouldCountdownStart] = useState(false);
+
 
 
     // bei handleClick ist es wichtig, dass arrayAskibil.length >= 0, immer gleich oder größer null ist.  Wenn man statt der 0 eine Eins nimmt, geht das ganze nicht auf. 
- const handleClick = (e) => {
+    const handleClick = (e) => {
     const value = e.target.value; 
     const key = e.target.title;
     
@@ -58,6 +62,7 @@ import {Questions} from "./Data";
    setNumber(Math.floor(Math.random() * (arrayAskibil.length-1)));
    
    setScore((prev) => (prev + 10));
+   setCountdown(20);
 
    
 }
@@ -80,6 +85,7 @@ else if(value === "false"){
 
     setArrayAskibil(Questions.filter(prev => !rightAnswer.includes(prev.SpecialKey)));
     
+    
 
     return() => {
         
@@ -87,6 +93,8 @@ else if(value === "false"){
     }
 
  },[rightAnswer]);
+
+ 
 
 
  const handlehistoricScore = () => {
@@ -111,7 +119,8 @@ const handleRestart = () => {
     setArrayAskibil(Questions.filter(prev => !rightAnswer.includes(prev.SpecialKey)));
     setNumber(Math.floor(Math.random() * (arrayAskibil.length)));
     setScore(0);
-
+    setCountdown(20);
+    setShouldCountdownStart(true);
 }
 
 
@@ -156,6 +165,7 @@ const quizConti =  <div>
 <div className="quizborderborder"id="Projektbeginn" >
 
 <div className="quizborder">
+    <h1 id="counter" className={countdown >= 15 ? "testb" : "testa"} >Verbleibende Zeit<br></br> {countdown}</h1>
     <h1>Ihr aktueller Punktestand ist: <br></br> {score}</h1>
     <h3>{arrayAskibil[number].Question}</h3>
     <button value={arrayAskibil[number].AnswerOneValue} className="button" title={arrayAskibil[number].SpecialKey}  onClick={handleClick}  >{arrayAskibil[number].AnswerOne}  </button>
@@ -173,8 +183,75 @@ const quizConti =  <div>
 
 
 
-return (
-        <div>{quizConti}</div>
+// Diese Variable bestimmt beim Quiz, dass erstmal ein Startbutton gedrückt werden muss 
+    
+
+
+    const handleStart = () => {
+       setVorBeginn(true);
+       setShouldCountdownStart(true);
+       
+   }
+
+   useEffect(() => {
+
+
+
+    if(shouldCountdownStart === true){
+    var runCounter = () =>{
+        setCountdown((prev) => prev -1 )
+    } 
+};
+    const myInterval = setInterval(runCounter, 1000)
+
+   
+
+    if(countdown === 0){
+        alert("Leider ist die Zeit abgelaufen. Sie kriegen neue 60 Sekunden, aber verlieren dafür 1 Punkt");
+        setScore((prev) => (prev - 1));
+        setCountdown(20);
+
+    };
+
+    if(arrayAskibil.length === 0){
+
+        setShouldCountdownStart(false);
+       // setVorBeginn(false);
         
+    };
+    console.log("Erste Runde ist gelaufen")
+
+    return() => {
+    clearInterval(myInterval);
+    console.log("return ist gelaufen")
+
+  
+
+   
+
+    if(arrayAskibil.length === 0){
+        setShouldCountdownStart(true);
+    };
+
+    }
+   },[countdown,vorBeginn,shouldCountdownStart,arrayAskibil])
+
+
+
+
+ const startContent =  <div className="projektdescription">
+ <h1>Projektbeschreibung</h1>
+ <p>Es handelt sich hierbei um ein Quiz welches ich selbst programmiert habe. Es ist mit dem Framework React.js programmiert. Ich vewende UseState und UseEffect Hook´s.</p>
+ 
+ <button className="button" onClick={handleStart}  >Start</button>
+</div>
+
+console.log(shouldCountdownStart);
+
+console.log(countdown);
+
+return (
+        <div> {vorBeginn === false ?  startContent :  quizConti  } </div>
+      
 )
 }

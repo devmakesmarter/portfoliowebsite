@@ -15,6 +15,16 @@
     gap: 10px;
 }
 
+.projektdescription {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px;
+    gap: 10px;
+}
+
 .cont {
     color: rgba(105, 99, 99, 0.514);
 }
@@ -63,4 +73,12 @@
 .button:active {
     position: relative;
     top: 1px;
+}
+
+.testa {
+    color: red;
+}
+
+.testb {
+    color: black
 }

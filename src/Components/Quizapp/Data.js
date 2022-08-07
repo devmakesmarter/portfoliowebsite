@@ -38,5 +38,27 @@
          AnswerTwoValue: true,
          SpecialKey: 5
      },
+     {
+         Question: "Der logische AND-Operator wird in Java durch welchen Operator dargestellt?",
+         AnswerOne: "||",
+         AnswerOneValue: false,
+         AnswerTwo: "&&",
+         AnswerTwoValue: true,
+         SpecialKey: 6
+     }, {
+         Question: "Enthält jedes Java-Programm mindestens eine Klasse?",
+         AnswerOne: "Ja",
+         AnswerOneValue: true,
+         AnswerTwo: "Nein",
+         AnswerTwoValue: false,
+         SpecialKey: 7
+     }, {
+         Question: "Welche Codezeile ist KEIN Beispiel für den Aufruf einer Methode?",
+         AnswerOne: "myCoffeeCup.emptyCup();",
+         AnswerOneValue: false,
+         AnswerTwo: "int sugarCubes = 7;",
+         AnswerTwoValue: true,
+         SpecialKey: 8
+     },
 
  ]
