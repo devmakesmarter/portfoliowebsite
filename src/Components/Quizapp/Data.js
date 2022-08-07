@@ -54,7 +54,7 @@
          SpecialKey: 7
      }, {
          Question: "Welche Codezeile ist KEIN Beispiel für den Aufruf einer Methode?",
-         AnswerOne: "myCoffeeCup.emptyCup();",
+         AnswerOne: "myCoffeeCup. emptyCup();",
          AnswerOneValue: false,
          AnswerTwo: "int sugarCubes = 7;",
          AnswerTwoValue: true,

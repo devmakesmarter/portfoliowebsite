@@ -88,7 +88,7 @@ else if(value === "false"){
     
 
     return() => {
-        
+        setArrayAskibil(Questions.filter(prev => !rightAnswer.includes(prev.SpecialKey)));
 
     }
 
@@ -120,7 +120,7 @@ const handleRestart = () => {
     setNumber(Math.floor(Math.random() * (arrayAskibil.length)));
     setScore(0);
     setCountdown(20);
-    setShouldCountdownStart(true);
+    
 }
 
 
@@ -182,7 +182,6 @@ const quizConti =  <div>
 </div>;
 
 
-
 // Diese Variable bestimmt beim Quiz, dass erstmal ein Startbutton gedrückt werden muss 
     
 
@@ -200,6 +199,7 @@ const quizConti =  <div>
     if(shouldCountdownStart === true){
     var runCounter = () =>{
         setCountdown((prev) => prev -1 )
+        
     } 
 };
     const myInterval = setInterval(runCounter, 1000)
@@ -210,6 +210,7 @@ const quizConti =  <div>
         alert("Leider ist die Zeit abgelaufen. Sie kriegen neue 60 Sekunden, aber verlieren dafür 1 Punkt");
         setScore((prev) => (prev - 1));
         setCountdown(20);
+      
 
     };
 
@@ -217,24 +218,27 @@ const quizConti =  <div>
 
         setShouldCountdownStart(false);
        // setVorBeginn(false);
-        
+       
     };
-    console.log("Erste Runde ist gelaufen")
+
+     /* if(arrayAskibil.length >= 0){
+
+        setShouldCountdownStart(true);
+       // setVorBeginn(false);
+       console.log("fünf");
+    }; */
+  
 
     return() => {
     clearInterval(myInterval);
-    console.log("return ist gelaufen")
-
-  
-
-   
-
+    
     if(arrayAskibil.length === 0){
         setShouldCountdownStart(true);
+       
     };
 
     }
-   },[countdown,vorBeginn,shouldCountdownStart,arrayAskibil])
+   },[countdown,vorBeginn,shouldCountdownStart,arrayAskibil,rightAnswer])
 
 
 
@@ -246,9 +250,8 @@ const quizConti =  <div>
  <button className="button" onClick={handleStart}  >Start</button>
 </div>
 
-console.log(shouldCountdownStart);
 
-console.log(countdown);
+
 
 return (
         <div> {vorBeginn === false ?  startContent :  quizConti  } </div>
