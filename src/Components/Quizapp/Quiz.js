@@ -229,6 +229,7 @@ const quizConti =  <div>
     }; */
   
 
+    
     return() => {
     clearInterval(myInterval);
     
