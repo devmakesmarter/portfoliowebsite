@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import  ReactDOM,{flushSync} from 'react-dom';
 import "../Quizapp/Quiz.css";
 import {Questions} from "./Data";
 
@@ -43,28 +44,33 @@ import {Questions} from "./Data";
 
     const [shouldCountdownStart, setShouldCountdownStart] = useState(false);
 
+   
+
+ 
 
 
     // bei handleClick ist es wichtig, dass arrayAskibil.length >= 0, immer gleich oder größer null ist.  Wenn man statt der 0 eine Eins nimmt, geht das ganze nicht auf. 
     const handleClick = (e) => {
     const value = e.target.value; 
     const key = e.target.title;
-    
+   
 
     if(value === "true" && arrayAskibil.length >= 0){
+
+        
+   
+
 
    setrightAnswer((prev) => (
     [...prev,parseInt(key) ]
    ))
-
-   
-  
    setNumber(Math.floor(Math.random() * (arrayAskibil.length-1)));
-   
    setScore((prev) => (prev + 10));
-   setCountdown(20);
-
+   setCountdown(2);
+   setArrayAskibil(Questions.filter(prev => !rightAnswer.includes(prev.SpecialKey)));
    
+ 
+
 }
 
 else if(value === "false"){
@@ -81,18 +87,9 @@ else if(value === "false"){
 
 // Durch useEffect wird gewährleistet, dass immer wenn eine Frage beantwortet wird, dass Array neu sortiert wird. Bevor es in separiert wurde in useEffect, 
 // kamen einige Fragen doppelt vor. Es wurd enicht gewährleistet, dass jede Frage nur einmal vorkommt. 
- useEffect(() =>{
 
-    setArrayAskibil(Questions.filter(prev => !rightAnswer.includes(prev.SpecialKey)));
-    
-    
 
-    return() => {
-        setArrayAskibil(Questions.filter(prev => !rightAnswer.includes(prev.SpecialKey)));
 
-    }
-
- },[rightAnswer]);
 
  
 
@@ -115,12 +112,23 @@ else if(value === "false"){
 // arrayAskibil.length darf nicht -1 sonst kommen negative Zahlen und das Programm crasht. 
 const handleRestart = () => {
 
+
+    
+
     setrightAnswer([]);
     setArrayAskibil(Questions.filter(prev => !rightAnswer.includes(prev.SpecialKey)));
+    
     setNumber(Math.floor(Math.random() * (arrayAskibil.length)));
     setScore(0);
-    setCountdown(20);
+    setCountdown(1);
     
+        flushSync(() => {
+         setShouldCountdownStart(true);
+         });
+      setShouldCountdownStart(true);
+
+
+
 }
 
 
@@ -165,7 +173,7 @@ const quizConti =  <div>
 <div className="quizborderborder"id="Projektbeginn" >
 
 <div className="quizborder">
-    <h1 id="counter" className={countdown >= 15 ? "testb" : "testa"} >Verbleibende Zeit<br></br> {countdown}</h1>
+    <h1 id="counter" className={countdown >= 11 ? "testb" : "testa"} >Verbleibende Zeit<br></br> {countdown}</h1>
     <h1>Ihr aktueller Punktestand ist: <br></br> {score}</h1>
     <h3>{arrayAskibil[number].Question}</h3>
     <button value={arrayAskibil[number].AnswerOneValue} className="button" title={arrayAskibil[number].SpecialKey}  onClick={handleClick}  >{arrayAskibil[number].AnswerOne}  </button>
@@ -183,17 +191,22 @@ const quizConti =  <div>
 
 
 // Diese Variable bestimmt beim Quiz, dass erstmal ein Startbutton gedrückt werden muss 
-    
+// Wenn vorBeginn false ist wird der Start Button angezeigt, wenn vorbeginn true ist, dann geht es los
+        
+
 
 
     const handleStart = () => {
        setVorBeginn(true);
        setShouldCountdownStart(true);
+    
        
    }
 
    useEffect(() => {
 
+    
+    setArrayAskibil(Questions.filter(prev => !rightAnswer.includes(prev.SpecialKey)));
 
 
     if(shouldCountdownStart === true){
@@ -201,6 +214,8 @@ const quizConti =  <div>
         setCountdown((prev) => prev -1 )
         
     } 
+
+
 };
     const myInterval = setInterval(runCounter, 1000)
 
@@ -215,32 +230,23 @@ const quizConti =  <div>
     };
 
     if(arrayAskibil.length === 0){
-
         setShouldCountdownStart(false);
-       // setVorBeginn(false);
        
     };
-
-     /* if(arrayAskibil.length >= 0){
-
-        setShouldCountdownStart(true);
-       // setVorBeginn(false);
-       console.log("fünf");
-    }; */
   
-
+   
     
     return() => {
+
+    
     clearInterval(myInterval);
     
-    if(arrayAskibil.length === 0){
-        setShouldCountdownStart(true);
-       
-    };
+   
+
 
     }
-   },[countdown,vorBeginn,shouldCountdownStart,arrayAskibil,rightAnswer])
-
+   },[countdown,vorBeginn,shouldCountdownStart,arrayAskibil.length,rightAnswer]
+   )
 
 
 

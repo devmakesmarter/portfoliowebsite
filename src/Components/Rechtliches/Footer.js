@@ -22,7 +22,9 @@ export const Footer = () => {
         <ul>
             <p><a href="/src/Components/Rechtliches/Datenschutz.js" target="_blank" >Datenschutz</a></p>
         </ul>
-        <ul><a onClick={handleClick} href="#uc-corner-modal-show">Cookie-Einstellungen</a></ul>
+        <ul><a href="" className="settings" onClick={() => window.openUcSettings()}>Cookie-Einstellungen</a></ul>
+        
+        
       
 
     </nav>
