@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    font-size: 16px;
+}
+
+.navigationwrapper {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(128, 128, 128, 0.5);
+    margin-bottom: 1rem;
+}
+
+.wrapperforlinks {
+    display: flex;
+}
+
+.myname {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    font-size: clamp(0.5rem, 0.4rem + 2.5vw, 1.5rem);
+    font-weight: 700;
+}
+
+.navigation {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    padding-right: 1rem;
+    flex-direction: row;
+    margin: 1rem;
+}
+
+.navigationstylemobile {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.3rem;
+    flex-direction: row;
+    margin: 1rem;
+    font-size: 1.5rem;
+}
+
+.navelemente {
+    font-size: clamp(0.5rem, 0.4rem + 2.5vw, 1rem);
+    font-weight: 700;
+    border: 0.1rem;
+    border-style: solid;
+    border-color: black;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    text-decoration: none;
+    color: black;
+}
+
+.image {
+    display: none;
+    background-color: rgba(128, 128, 128, 0.5);
+}
+
+@media (max-width: 768px) {
+    .image {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .navigation {
+        display: none;
+    }
+    .navigationwrapper {
+        display: flex;
+        justify-content: flex-end;
+        background-color: rgba(128, 128, 128, 0.5);
+        margin-bottom: 1rem;
+    }
+    .myname {
+        display: none;
+    }
+}

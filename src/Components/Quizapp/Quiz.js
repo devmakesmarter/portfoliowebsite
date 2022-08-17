@@ -44,9 +44,49 @@ import {Questions} from "./Data";
 
     const [shouldCountdownStart, setShouldCountdownStart] = useState(false);
 
+
+
+
+    useEffect(() => {
+        
+        if(shouldCountdownStart === true){
+        var runCounter = () =>{
+            setCountdown((prev) => prev -1 )
+        } 
+    };
+        const myInterval = setInterval(runCounter, 1000)
+    
+        // if(countdown === 0){
+        //     alert("Leider ist die Zeit abgelaufen. Sie kriegen neue 60 Sekunden, aber verlieren dafür 1 Punkt");
+        //     setScore((prev) => (prev - 1));
+        //     setCountdown(20);
+        // };
+    
+       
+        return() => {
+        clearInterval(myInterval);
+        }
+       },[vorBeginn,shouldCountdownStart]);
    
 
- 
+
+       useEffect(() => {
+
+        if(arrayAskibil.length === 0){
+            setShouldCountdownStart(false);
+        };
+
+       },[arrayAskibil.length]);
+
+       useEffect(() =>{
+        setArrayAskibil(Questions.filter(prev => !rightAnswer.includes(prev.SpecialKey)));
+        return () => {
+            setArrayAskibil(Questions.filter(prev => !rightAnswer.includes(prev.SpecialKey)));
+        }
+    
+       },[rightAnswer]);
+
+
 
 
     // bei handleClick ist es wichtig, dass arrayAskibil.length >= 0, immer gleich oder größer null ist.  Wenn man statt der 0 eine Eins nimmt, geht das ganze nicht auf. 
@@ -56,26 +96,16 @@ import {Questions} from "./Data";
    
 
     if(value === "true" && arrayAskibil.length >= 0){
-
-        
-   
-
-
    setrightAnswer((prev) => (
     [...prev,parseInt(key) ]
    ))
    setNumber(Math.floor(Math.random() * (arrayAskibil.length-1)));
    setScore((prev) => (prev + 10));
-   setCountdown(2);
-   setArrayAskibil(Questions.filter(prev => !rightAnswer.includes(prev.SpecialKey)));
-   
- 
+   setCountdown(20);
 
 }
 
 else if(value === "false"){
-
-    alert("Leider ist die Antwort falsch Sie verlieren leider 10 Punkte");
 
     setScore((prev) => (prev - 10));
     setNumber(Math.floor(Math.random() * (arrayAskibil.length-1)));
@@ -89,46 +119,23 @@ else if(value === "false"){
 // kamen einige Fragen doppelt vor. Es wurd enicht gewährleistet, dass jede Frage nur einmal vorkommt. 
 
 
-
-
- 
-
-
  const handlehistoricScore = () => {
-
     setHistoricScore((prev) => ( 
-
     [...prev, score]
-)
-
-)
-
-
-
- }
+))
+}
 
 
  
 // arrayAskibil.length darf nicht -1 sonst kommen negative Zahlen und das Programm crasht. 
 const handleRestart = () => {
-
-
-    
-
     setrightAnswer([]);
-    setArrayAskibil(Questions.filter(prev => !rightAnswer.includes(prev.SpecialKey)));
-    
+    setArrayAskibil(Questions);
     setNumber(Math.floor(Math.random() * (arrayAskibil.length)));
     setScore(0);
-    setCountdown(1);
-    
-        flushSync(() => {
-         setShouldCountdownStart(true);
-         });
+    setCountdown(20);
+
       setShouldCountdownStart(true);
-
-
-
 }
 
 
@@ -165,12 +172,9 @@ const quizConti =  <div>
 <div>     
 
 
-<div className="projektdescription">
-    <h1>Projektbeschreibung</h1>
-    <p>Es handelt sich hierbei um ein Quiz welches ich selbst programmiert habe. Es ist mit dem Framework React.js programmiert. Ich vewende UseState und UseEffect Hook´s.  </p>
-</div>
 
-<div className="quizborderborder"id="Projektbeginn" >
+
+<div className="quizborderborder" >
 
 <div className="quizborder">
     <h1 id="counter" className={countdown >= 11 ? "testb" : "testa"} >Verbleibende Zeit<br></br> {countdown}</h1>
@@ -199,60 +203,26 @@ const quizConti =  <div>
     const handleStart = () => {
        setVorBeginn(true);
        setShouldCountdownStart(true);
-    
-       
    }
 
-   useEffect(() => {
-
-    
-    setArrayAskibil(Questions.filter(prev => !rightAnswer.includes(prev.SpecialKey)));
 
 
-    if(shouldCountdownStart === true){
-    var runCounter = () =>{
-        setCountdown((prev) => prev -1 )
-        
-    } 
 
-
+   if(countdown === 0){
+   // alert("Leider ist die Zeit abgelaufen. Sie kriegen neue 60 Sekunden, aber verlieren dafür 1 Punkt");
+    setScore((prev) => (prev - 1));
+    setCountdown(20);
 };
-    const myInterval = setInterval(runCounter, 1000)
 
-   
 
-    if(countdown === 0){
-        alert("Leider ist die Zeit abgelaufen. Sie kriegen neue 60 Sekunden, aber verlieren dafür 1 Punkt");
-        setScore((prev) => (prev - 1));
-        setCountdown(20);
-      
 
-    };
-
-    if(arrayAskibil.length === 0){
-        setShouldCountdownStart(false);
-       
-    };
   
-   
-    
-    return() => {
-
-    
-    clearInterval(myInterval);
-    
-   
-
-
-    }
-   },[countdown,vorBeginn,shouldCountdownStart,arrayAskibil.length,rightAnswer]
-   )
 
 
 
- const startContent =  <div className="projektdescription">
+ const startContent =  <div className="projektdescription" >
  <h1>Projektbeschreibung</h1>
- <p>Es handelt sich hierbei um ein Quiz welches ich selbst programmiert habe. Es ist mit dem Framework React.js programmiert. Ich vewende UseState und UseEffect Hook´s.</p>
+ <p id="Projektbeginn" >Dieses Quiz habe ich selbst programmiert. Viel Erfolg!</p>
  
  <button className="button" onClick={handleStart}  >Start</button>
 </div>

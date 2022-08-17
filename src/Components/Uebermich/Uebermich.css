@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    font-size: 16px;
+}
+
+.containerthatcontainsthegriduebermich {
+    display: flex;
+    justify-content: center;
+}
+
+.containerforgriduebermich {
+    display: grid;
+    grid-template-columns: 25rem 25rem;
+    grid-template-rows: 20rem;
+    grid-template-areas: "unten oben";
+    margin-top: 2rem;
+}
+
+.leftsideinsidethegriduebermich {
+    grid-area: unten;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1rem;
+    background-color: rgba(207, 201, 201, 0.3);
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+
+.containerfortext {
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    padding: 0.5rem;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.containerfortext p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.rightsideinsidethegriduebermich {
+    grid-area: oben;
+}
+
+.imginsidetherighttgriduebermich {
+    width: 100%;
+    height: 100%;
+    border-color: rgba(255, 255, 255, 1);
+    border-style: solid;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    border-top-left-radius: 0rem;
+}
+
+@media only screen and (max-width: 800px) {
+    .containerforgriduebermich {
+        display: grid;
+        grid-template-columns: 20rem;
+        grid-template-rows: 13rem 13rem;
+        grid-template-areas: "oben" "unten";
+        margin-top: 2rem;
+    }
+    .leftsideinsidethegriduebermich {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(207, 201, 201, 0.3);
+        border-bottom-left-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+        border-top-left-radius: 0rem;
+    }
+    .containerfortext {
+        display: flex;
+        justify-content: center;
+        font-size: 0.8rem;
+        padding: 0.5rem;
+        height: 80%;
+        width: 100%;
+    }
+    .rightsideinsidethegriduebermich {
+        display: flex;
+    }
+    .imginsidetherighttgriduebermich {
+        width: 100%;
+        height: 100%;
+        border-color: rgba(255, 255, 255, 1);
+        border-style: solid;
+        border-top-right-radius: 2rem;
+        border-top-left-radius: 2rem;
+        border-bottom-right-radius: 0rem;
+    }
+}

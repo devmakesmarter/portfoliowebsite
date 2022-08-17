@@ -1,12 +1,16 @@
 
 import "../Components/App.css"
 import {Navbar} from "../Components/Navbar/Navbar";
+import { Navbartwo } from "./Navbartwo/Navbartwo";
 import {SkillsComponent} from "../Components/Skills/SkillsComponent";
 import {Quizapp} from "../Components/Quizapp/Quiz";
 import {Impressum} from "./Rechtliches/Impressum";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Datenschutz } from "./Rechtliches/Datenschutz";
 import {Footer} from "../Components/Rechtliches/Footer";
+import {Uebermich} from "../Components/Uebermich/Uebermich";
+
+
 function App() {
 
   
@@ -18,12 +22,16 @@ function App() {
     <div className="App">
 
     <br></br>
-    <Navbar/>
+    <Navbartwo/>
     <br></br>
     <SkillsComponent/>
-    <br></br> 
+    <Uebermich/>
     <Quizapp/>
    
+
+   
+<br></br>
+    <Footer/>
 
     <Switch>
     <Route exact path="/src/Components/Rechtliches/Impressum.js">
@@ -34,9 +42,6 @@ function App() {
     </Route>
 
     </Switch>
-<br></br>
-    <Footer/>
-
     
     </div>
 

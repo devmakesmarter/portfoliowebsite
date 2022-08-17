@@ -1,3 +1,10 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
 html {
     font-size: 16px;
 }
@@ -7,6 +14,11 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: clamp(0.3rem, 0.4rem + 2.0vw, 1rem);
+}
+
+.faehigkeiten {
+    font-size: clamp(1.5rem, 0.4rem + 2.5vw, 2rem);
 }
 
 .containerSkillList {
@@ -24,19 +36,96 @@ html {
     align-items: center;
     align-content: center;
     text-align: center;
+    border: 0.1rem;
     font-size: 1.3rem;
-    border: 0.1rem solid black;
-    border-radius: 0.3rem;
+    border-style: solid;
+    border-color: black;
+    border-radius: 1rem;
     margin: 0.3rem;
-    padding: 0.3rem;
+    padding: 0.5rem;
     min-height: 2.7rem;
     min-width: 7rem;
 }
 
 .skillListElement:hover {
-    color: grey;
+    background-color: grey;
 }
 
 .fontAwesome {
     text-align: center;
+}
+
+
+/* Here Begins the CSS for the Grid Container */
+
+.containerthatcontainsthegrid {
+    display: flex;
+    justify-content: center;
+}
+
+.containerforgrid {
+    display: grid;
+    grid-template-columns: 25rem 25rem;
+    grid-template-rows: 20rem;
+    margin-top: 2rem;
+}
+
+.leftsideinsidethegrid {}
+
+.imginsidetheleftgrid {
+    width: 100%;
+    height: 100%;
+    border-color: rgba(255, 255, 255, 1);
+    border-style: solid;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    border-top-right-radius: 0rem;
+}
+
+.rightsideinsidethegrid {
+    display: flex;
+    background-color: rgba(207, 201, 201, 0.3);
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
+@media only screen and (max-width: 800px) {
+    .containerforgrid {
+        display: grid;
+        grid-template-columns: 20rem;
+        grid-template-rows: 13rem 13rem;
+        margin-top: 2rem;
+    }
+    .imginsidetheleftgrid {
+        width: 100%;
+        height: 100%;
+        border-left: 0rem;
+        border-color: rgba(255, 255, 255, 1);
+        border-style: solid;
+        border-top-left-radius: 2rem;
+        border-top-right-radius: 2rem;
+        border-bottom-left-radius: 0rem;
+    }
+    .rightsideinsidethegrid {
+        display: flex;
+        background-color: rgba(207, 201, 201, 0.3);
+        border-top-right-radius: 0rem;
+        border-bottom-right-radius: 2rem;
+        border-bottom-left-radius: 2rem;
+    }
+    .skillListElement {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        font-size: 1rem;
+        border-style: solid;
+        border-color: black;
+        border-radius: 1rem;
+        margin: 0.3rem;
+        padding: 0.1rem;
+        min-height: 2.5rem;
+        min-width: 5rem;
+    }
 }

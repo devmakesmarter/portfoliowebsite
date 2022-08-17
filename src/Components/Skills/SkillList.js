@@ -7,7 +7,7 @@
          fontAwesome: "fa-brands fa-html5"
      },
      {
-         Skillname: "CSS",
+         Skillname: "Css",
          url: "",
          className: "skillListElement",
          fontAwesome: "fa-brands fa-css3"
@@ -25,6 +25,24 @@
          fontAwesome: "fa-brands fa-react"
 
      },
+     {
+         Skillname: "Teamplayer",
+         url: "",
+         className: "skillListElement",
+         fontAwesome: "fa-solid fa-people-group"
+     },
+     {
+         Skillname: " Office",
+         url: "",
+         className: "skillListElement",
+         fontAwesome: "fa-brands fa-microsoft"
+     },
+     {
+         Skillname: " Think",
+         url: "",
+         className: "skillListElement",
+         fontAwesome: "fa-solid fa-brain"
+     }
 
 
 
