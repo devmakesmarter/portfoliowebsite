@@ -209,7 +209,7 @@ const quizConti =  <div>
 
 
    if(countdown === 0){
-   // alert("Leider ist die Zeit abgelaufen. Sie kriegen neue 60 Sekunden, aber verlieren dafür 1 Punkt");
+  
     setScore((prev) => (prev - 1));
     setCountdown(20);
 };
