@@ -161,7 +161,7 @@ const quizConti =
      )  
 
      :
-    // Die Klammern sind wichtig, wenn JSX gerendert werden soll. 
+    // Die Klammern sind wichtig, wenn JSX gerendert werden soll.. 
     (
     <div>     
      <div className="quizborderborder" >
