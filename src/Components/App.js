@@ -12,10 +12,6 @@ import {Uebermich} from "../Components/Uebermich/Uebermich";
 
 
 function App() {
-
-  
-
-
   return (
 
   <Router>
@@ -27,12 +23,8 @@ function App() {
     <SkillsComponent/>
     <Uebermich/>
     <Quizapp/>
-   
-
-   
-<br></br>
+<br></br><br></br><br></br>
     <Footer/>
-
     <Switch>
     <Route exact path="/src/Components/Rechtliches/Impressum.js">
       <Impressum/>
@@ -40,12 +32,9 @@ function App() {
     <Route exact path="/src/Components/Rechtliches/Datenschutz.js">
       <Datenschutz/>
     </Route>
-
     </Switch>
-    
     </div>
-
-    </Router>
+  </Router>
   );
 }
 
