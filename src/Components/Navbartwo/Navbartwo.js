@@ -8,7 +8,17 @@ import logox from "../Navbartwo/_close_icon_small.png";
 
 export const Navbartwo = () => {
 
+    /* Die Navbar funktioniert wie folgt. Grundsätzlich sind die Navbar und das Logo sichtbar. Über die 
+       CSS-Klasse .image wird das Logo bei Desktopansicht verborgen. Sobald die Bildschirmweite unter 768 px ist, 
+       erscheint das Logo und die  Navbar verbirgt sich. Wenn auf die drei Streifen geclickt wird, dann ändert sich 
+       die Quelle für das Logo, es wird logox und gleichzeitg ändert sich die Css-Klasse für die Nabar. 
+       In der Function const handleClick hole ich mir über die id die beiden Felder 
+
+
+    */
     const handleClick = () => {
+
+        // hier holt greife ich mir die beiden Felder 
         const logo =  document.getElementById("logo");
         const nav  = document.getElementById("navigation");
         
@@ -23,8 +33,12 @@ export const Navbartwo = () => {
     }
 
 
+
+
     return(
 
+
+        // Die Navelemente bzw. deren Inhalts ist in der Items.js Datei gespeichert. Darüber erweiterbar. 
         <div>
             <div className="image"  > 
               <img  id="logo" onClick={handleClick} src={logostripes} alt=""></img>
