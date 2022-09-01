@@ -6,6 +6,7 @@ import {Questions} from "./Data";
 
  export const Quizapp = () => {
 
+    //
     /* Das Quiz besteht aus mehreren Elementen.     
     
         1. einem Array mit Objekten welches in der Data.js gelagert ist. Die Data.js ist wie folgt aufgebaut. Eine Frage mit zwei Antwortmöglichkeiten. 
