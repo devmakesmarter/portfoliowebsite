@@ -4,19 +4,22 @@
          Skillname: "HTML",
          url: "",
          className: "skillListElement",
-         fontAwesome: "fa-brands fa-html5"
+         fontAwesome: "fa-brands fa-html5",
+         description: "HTML HYPERTEXT MARKING Language "
      },
      {
          Skillname: "Css",
          url: "",
          className: "skillListElement",
-         fontAwesome: "fa-brands fa-css3"
+         fontAwesome: "fa-brands fa-css3",
+         description: "Cascading Style Sheets"
      },
      {
          Skillname: "Javascript",
          url: "",
          className: "skillListElement",
-         fontAwesome: "fa-brands fa-js"
+         fontAwesome: "fa-brands fa-js",
+         description: "Javascript ist zur Veränderung des Doms"
      },
      {
          Skillname: "React.js",
