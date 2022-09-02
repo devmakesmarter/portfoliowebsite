@@ -45,6 +45,7 @@ html {
     padding: 0.5rem;
     min-height: 2.7rem;
     min-width: 7rem;
+    cursor: pointer;
 }
 
 .skillListElement:hover {

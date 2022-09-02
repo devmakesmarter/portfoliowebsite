@@ -9,13 +9,22 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Datenschutz } from "./Rechtliches/Datenschutz";
 import {Footer} from "../Components/Rechtliches/Footer";
 import {Uebermich} from "../Components/Uebermich/Uebermich";
+import {PopUp} from "../Components/Popup/Popup";
+
+
 
 
 function App() {
   return (
 
+    
+
+ 
   <Router>
+
+
     <div className="App">
+
 
     <br></br>
     <Navbartwo/>
@@ -33,9 +42,18 @@ function App() {
       <Datenschutz/>
     </Route>
     </Switch>
+  
+
+    
     </div>
-  </Router>
+
+
+  </Router> 
+
+  
+
   );
-}
+  
+  }
 
 export default App;
