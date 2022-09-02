@@ -5,7 +5,7 @@
          url: "",
          className: "skillListElement",
          fontAwesome: "fa-brands fa-html5",
-         description: "HTML HYPERTEXT MARKING Language "
+         description: "Die Hypertext Markup Language (HTML, englisch für Hypertext-Auszeichnungssprache) ist eine textbasierte Auszeichnungssprache zur Strukturierung elektronischer Dokumente wie Texte mit Hyperlinks, Bildern und anderen Inhalten. HTML-Dokumente sind die Grundlage des World Wide Web und werden von Webbrowsern dargestellt"
      },
      {
          Skillname: "Css",
@@ -46,7 +46,5 @@
          className: "skillListElement",
          fontAwesome: "fa-solid fa-brain"
      }
-
-
 
  ];

@@ -41,7 +41,7 @@ export const SkillsComponent = () => {
         setImg(picturethree)
     }
     }
-
+ 
 
     const handleClose = () => {
 
