@@ -1,4 +1,3 @@
-
 import "../Skills/SkillsComponent.css";
 import { skillList } from "./SkillList";
 import toolbox from "../Skills/Picutres/tools 1280 960.jpg";
@@ -12,46 +11,55 @@ export const SkillsComponent = () => {
 
     console.log(" Hallo und herzlich Willkommen!");
 
-    return ( 
-        <div>
+    return ( <
+        div >
 
-            {/*
-        <div className="bigContainer">
-            <div  className="bigContainer" >
-            
-            <h1 className="faehigkeiten" > Mein Fähigkeiten sind</h1>
-
-
-            <br></br> 
-            </div>
-            </div>
-            <div className="containerSkillList">
-            {skillList.map((prev,key)=> {
-
-return <div key={key} className={prev.className} ><i className={prev.fontAwesome}>{prev.Skillname}</i></div>
-
-} )}
-            </div>
-*/ }
-            <div className="containerthatcontainsthegrid">
-            <div className="containerforgrid" > 
-
-            <div className="leftsideinsidethegrid"><img src={toolbox} className="imginsidetheleftgrid" alt="toolbox" ></img></div>
-
-            <div className="rightsideinsidethegrid"> <div className="containerSkillList">
-            {skillList.map((prev,key)=> {
-
-return <div key={key} className={prev.className} ><i className={prev.fontAwesome}>{prev.Skillname}</i></div>
-
-} )}
-            </div> </div>
-
-            </div>
-            </div>
+        {
+            /*
+                    <div className="bigContainer">
+                        <div  className="bigContainer" >
+                        
+                        <h1 className="faehigkeiten" > Mein Fähigkeiten sind</h1>
 
 
+                        <br></br> 
+                        </div>
+                        </div>
+                        <div className="containerSkillList">
+                        {skillList.map((prev,key)=> {
 
-        </div>
+            return <div key={key} className={prev.className} ><i className={prev.fontAwesome}>{prev.Skillname}</i></div>
+
+            } )}
+                        </div>
+            */
+        } <
+        div className = "containerthatcontainsthegrid" >
+        <
+        div className = "containerforgrid" >
+
+        <
+        div className = "leftsideinsidethegrid" > < img src = { toolbox }
+        className = "imginsidetheleftgrid"
+        alt = "toolbox" > < /img></div >
+
+        <
+        div className = "rightsideinsidethegrid" > < div className = "containerSkillList" > {
+            skillList.map((prev, key) => {
+                return <div key = { key }
+                className = { prev.className } > < i className = { prev.fontAwesome } > { prev.Skillname } < /i></div >
+            })
+        } <
+        /div> </div >
+
+        <
+        /div> <
+        /div>
+
+
+
+        <
+        /div>
     )
 
 
