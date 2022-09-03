@@ -82,7 +82,7 @@ export const SkillsComponent = () => {
                             </div>     
                             )
                             } )}
-                     </div>
+                        </div>
                      <PopUp description={valueOfProp} visible={visible} event={handleClose} img={img} /> 
                     </div>
 
