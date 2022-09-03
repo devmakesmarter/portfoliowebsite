@@ -25,7 +25,7 @@ export const SkillsComponent = () => {
     // visible steuert die Sichtbarkeit des Popup. Grundsätzlich ist der Popup so programmiert, bei false eine null zu returnen. Andernfalls Returnt der Popup sich selbst. 
     // img ist für das Bild in dem PopUp zuständig. Es wird auch von hier weitergegeben. 
 
-    const [valueOfProp, setValueOfProp] = useState(null);
+    const [valueOfProp, setValueOfProp] = useState("");
     const [visible, setVisible] = useState(false);
     const [img, setImg] = useState(null);
 
@@ -37,7 +37,12 @@ export const SkillsComponent = () => {
         const key = e.target.dataset.value; 
     
     // hier wird die Beschreibung tranferiert. 
-        setValueOfProp(key);
+        setValueOfProp((prev) => {
+
+             prev = key;
+             return key;
+
+        }   );
     // hier wird die Sichtbarkeit des Popup eingestellt
         setVisible(true);
     
