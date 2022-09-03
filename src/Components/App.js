@@ -1,6 +1,6 @@
 
 import "../Components/App.css"
-import {Navbar} from "../Components/Navbar/Navbar";
+
 import { Navbartwo } from "./Navbartwo/Navbartwo";
 import {SkillsComponent} from "../Components/Skills/SkillsComponent";
 import {Quizapp} from "../Components/Quizapp/Quiz";
@@ -9,7 +9,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Datenschutz } from "./Rechtliches/Datenschutz";
 import {Footer} from "../Components/Rechtliches/Footer";
 import {Uebermich} from "../Components/Uebermich/Uebermich";
-import {PopUp} from "../Components/Popup/Popup";
+
 
 
 
