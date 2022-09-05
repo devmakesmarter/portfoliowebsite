@@ -38,7 +38,7 @@ export const ToDo = () => {
 
     const handleDelete = (e) => {
         const idnumber = parseInt(e.target.id);
-
+        
         setAllInput(allInput.filter(prev => prev.id != idnumber));
     }
 
@@ -69,8 +69,8 @@ export const ToDo = () => {
                     <br></br><br></br><br></br>
                 <div className="containerfortheoutputsection"> 
                 <AllTasks allInput={allInput} handleDelete={handleDelete}   />
-      
-    </div>
+                
+                </div>
             </div>
         </div>
 
