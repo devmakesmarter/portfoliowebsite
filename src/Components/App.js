@@ -32,7 +32,8 @@ function App() {
     <SkillsComponent/>
     <Uebermich/>
     <Quizapp/>
-<br></br><br></br><br></br>
+<br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+    <ToDo/><br></br><br></br><br></br><br></br><br></br><br></br>
     <Footer/>
     <Switch>
     <Route exact path="/src/Components/Rechtliches/Impressum.js">
