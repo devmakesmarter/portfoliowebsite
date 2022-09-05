@@ -1,7 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "../Components/AllTasks.css";
 
-export const AllTasks = ({ allInput, handleDelete }) => {
+export const AllTasks = ({ allInput, handleDelete,checkbox,getChecked }) => {
+
+        
+
 
 
         return (
@@ -12,8 +15,8 @@ export const AllTasks = ({ allInput, handleDelete }) => {
                         return ( 
                         
                                
-                                <div key={key} className="parentfortheoutput" >
-                                <div className="containerforcheckbox" >   <input className="checkbox" type="checkbox"></input> </div>
+                                <div key={key} id={key} className="parentfortheoutput" >
+                                <div className="containerforcheckbox"  >   <input onChange={getChecked} className="checkbox" type="checkbox" value={checkbox}></input> </div>
                                 <div className="containerfortheoutputtext" >{prev?.notiz}</div>
                                 <div className="containerfortheoutputdate" >{prev?.date} </div>
                                 <div className="containerfortheoutputprio" > {prev?.prio} </div>
