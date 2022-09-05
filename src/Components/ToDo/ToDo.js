@@ -9,6 +9,8 @@ export const ToDo = () => {
     const [allInput, setAllInput] = useState([{notiz:"Hier erscheint Ihre Aufgabe",id:151651321531, date:"2022-03-01", prio:1 }])
     const [date, setDate] = useState("");  // Diese Variable greift das Datum der Aufgabe ab. In der Form ist das Datum als required deklariert. Somit soll verhindert werden, dass beim rendern kein Wert vorhanden ist und es bricht
     const [prio, setPrio] = useState("");// Diese Variable greift die Prio der Aufgabe ab. In der Form ist das Datum als required deklariert. Somit soll verhindert werden, dass beim rendern kein Wert vorhanden ist und es bricht
+    const [checkbox, setCheckbox] = useState("");
+
 
     const getInputValue = (e) =>{
 
@@ -23,6 +25,11 @@ export const ToDo = () => {
     const getPrio = (e) => {
 
         setPrio(parseInt(e.target.value));
+
+    }
+
+    const getChecked = (e) => {
+        setCheckbox(e.target.value);
 
     }
     const handleSubmit = (e) =>{
@@ -43,6 +50,8 @@ export const ToDo = () => {
 
         
         setAllInput(allInput.filter(prev => prev.id != idnumber));
+        console.log(checkbox);
+       
     }
 
     console.log(allInput);
@@ -72,7 +81,7 @@ export const ToDo = () => {
                     </div>
                     <br></br><br></br>
                 <div className="containerfortheoutputsection"> 
-                <AllTasks allInput={allInput} handleDelete={handleDelete}   />
+                <AllTasks allInput={allInput} handleDelete={handleDelete} checkbox={checkbox} getChecked={getChecked}  />
                 
                 </div>
             </div>
