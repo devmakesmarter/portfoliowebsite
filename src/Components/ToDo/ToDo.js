@@ -1,37 +1,69 @@
-import React, {useState} from 'react';
+import React, {useState,useEffect} from 'react';
 import "../ToDo/ToDo.css";
 import {AllTasks} from "../ToDo/Components/AllTasks";
+import { flushSync } from 'react-dom';
+import icon from "../ToDo/icon.png";
+import {PopUpone} from '../Popupone/PopUpone';
+
 export const ToDo = () => {
     ///
 
     const [inputValue, setInputValue] = useState("");
 
-    const [allInput, setAllInput] = useState([{notiz:"Hier erscheint Ihre Aufgabe",id:151651321531, date:"2022-03-01", prio:1 }])
+    const [allInput, setAllInput] = useState([{notiz:"Hier erscheint Ihre Aufgabe",id:151651321531, date:"2022-03-01", prio:1 }]) // hier werden die Aufgaben gespeichert. 
     const [date, setDate] = useState("");  // Diese Variable greift das Datum der Aufgabe ab. In der Form ist das Datum als required deklariert. Somit soll verhindert werden, dass beim rendern kein Wert vorhanden ist und es bricht
     const [prio, setPrio] = useState("");// Diese Variable greift die Prio der Aufgabe ab. In der Form ist das Datum als required deklariert. Somit soll verhindert werden, dass beim rendern kein Wert vorhanden ist und es bricht
-    const [checkbox, setCheckbox] = useState("");
+    const [childReRender, setChildReRender] = useState(500);
+    const [filter, setFilter] = useState(0);
+    const [settingsfortodo, setSettingsForToDo] = useState(false);
 
 
+    const number = () =>{
+       return Math.floor(Math.random() * 1008642310)
+    }
+
+
+     useEffect( ()=> {
+
+        
+            // setAllInput(allInput.sort((a,b) => {
+            //             return a.prio-b.prio
+            //        }))
+
+
+                   setAllInput(allInput.sort((a,b) => {
+                    const datea = new Date(a.date);
+                    const dateb = new Date(b.date);
+
+                    return datea -dateb
+               }))
+
+                setInputValue("");
+                setChildReRender(number());
+     },[allInput]) 
+
+ 
+
+
+   
     const getInputValue = (e) =>{
 
-        setInputValue(e.target.value);
-       
+        const value = e.target.value;
+        setInputValue(value);
+
     }
 
     const getDate = (e) => {
-        setDate(e.target.value); 
+        const value = e.target.value;
+        setDate(value); 
     }
 
     const getPrio = (e) => {
-
-        setPrio(parseInt(e.target.value));
-
-    }
-
-    const getChecked = (e) => {
-        setCheckbox(e.target.value);
+        const value = e.target.value;
+         setPrio(parseInt(value));
 
     }
+
     const handleSubmit = (e) =>{
         e.preventDefault();
         setAllInput((prev) => ([...prev, {notiz: inputValue,
@@ -42,27 +74,31 @@ export const ToDo = () => {
     }
 
 
-
-
     const handleDelete = (e) => {
         const idnumber = parseInt(e.target.id);
-        
-
-        
         setAllInput(allInput.filter(prev => prev.id != idnumber));
-        
-       
     }
 
-    
+    const openSetteingsFromToDo = () => {
+        setSettingsForToDo(true);
+    }
+
+    const closeSetteingsFromToDo = () => {
+
+        setSettingsForToDo(false);
+    }
+
 
 
 
   return (
     <>
+
+       
+
         <div className="containercontainercontainercontainer" >
             <div className="containercontainercontainer"> 
-                <div className="containerforheadline"><h1> TO DO ´S</h1></div>
+                <div className="containerforheadline"><h1> TO DO ´S</h1> </div>
                 <div className="containerfortheinputsection" > 
                     <form className="formfortheinputsection" onSubmit={handleSubmit}>
                         <div className="containerforinputtext"> 
@@ -81,7 +117,9 @@ export const ToDo = () => {
                     </div>
                     <br></br><br></br>
                 <div className="containerfortheoutputsection"> 
-                <AllTasks allInput={allInput} handleDelete={handleDelete} checkbox={checkbox} getChecked={getChecked}  />
+                <div className="settings"  ><img onClick={openSetteingsFromToDo} className="settingsimage" src={icon} alt=""></img> <PopUpone settingsfortodo={settingsfortodo} closesettingsfortodo={closeSetteingsFromToDo} /> </div>
+
+                <AllTasks allInput={allInput} handleDelete={handleDelete} childReRender={childReRender} />
                 
                 </div>
             </div>

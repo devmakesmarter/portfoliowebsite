@@ -9,14 +9,15 @@ export const PopUp = ({description, visible, event, img}) => {
        Die Sichtbarkeit wird über die Variable visible gesteurt. Die Inhalte des werden auch von der Hauptkompnente runter gegeben. Auch die Funktions für das Schliessen und Öffnen. 
 
     */
+   
+  
 
     if(!visible) {
         return null
     }
 
-
+    else if(visible){
     return( 
-    
     <> 
             <div className="containerfromcontainerfrompopup"> 
                  <div className="containerfrompopup"> 
@@ -28,6 +29,6 @@ export const PopUp = ({description, visible, event, img}) => {
             </div>
     </>
 )
-
+}
 
 };

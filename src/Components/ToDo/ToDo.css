@@ -54,12 +54,14 @@ html {
     grid-template-columns: 28rem 12rem;
     grid-template-rows: auto auto;
     grid-template-areas: "topleft topright" "bottomleft bottomright";
+    color: black;
 }
 
 .containerforinputtext {
     grid-area: topleft;
     width: 28rem;
     height: 5rem;
+    color: black;
 }
 
 .inputfieldtext {
@@ -70,12 +72,14 @@ html {
     height: 5rem;
     text-align: center;
     font-weight: bold;
+    color: black;
 }
 
 .containerfordate {
     grid-area: bottomleft;
     width: 28rem;
     height: 5rem;
+    color: black;
 }
 
 .inputfielddate {
@@ -87,12 +91,14 @@ html {
     text-align: center;
     background-color: rgba(184, 181, 181, 0.5);
     font-weight: bold;
+    color: black;
 }
 
 .containerfornumber {
     grid-area: bottomright;
     width: 12rem;
     height: 5rem;
+    color: black;
 }
 
 .inputfieldnumber {
@@ -104,6 +110,7 @@ html {
     height: 5rem;
     text-align: center;
     font-weight: bold;
+    color: black;
 }
 
 .containerforsubmit {
@@ -120,13 +127,29 @@ html {
     width: 12rem;
     height: 5rem;
     font-weight: bold;
+    color: black;
 }
 
 .containerfortheoutputsection {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 40rem;
+}
+
+.settings {
+    position: absolute;
+    top: -2rem;
+    left: 37.5rem;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 5;
+}
+
+.settingsimage {
+    width: 2rem;
+    height: 2rem;
 }
 
 @media only screen and (max-width: 800px) {
@@ -157,11 +180,13 @@ html {
         grid-template-columns: 14rem 6rem;
         grid-template-rows: auto auto;
         grid-template-areas: "topleft topright" "bottomleft bottomright";
+        color: black;
     }
     .containerforinputtext {
         grid-area: topleft;
         width: 14rem;
         height: 2.5rem;
+        color: black;
     }
     .inputfieldtext {
         border-style: solid;
@@ -171,11 +196,13 @@ html {
         height: 2.5rem;
         text-align: center;
         font-weight: bold;
+        color: black;
     }
     .containerfordate {
         grid-area: bottomleft;
         width: 14rem;
         height: 2.5rem;
+        color: black;
     }
     .inputfielddate {
         border: 0.1rem;
@@ -186,11 +213,13 @@ html {
         text-align: center;
         background-color: rgba(184, 181, 181, 0.5);
         font-weight: bold;
+        color: black;
     }
     .containerfornumber {
         grid-area: bottomright;
         width: 6rem;
         height: 2.5rem;
+        color: black;
     }
     .inputfieldnumber {
         background-color: rgba(184, 181, 181, 0.5);
@@ -201,11 +230,13 @@ html {
         height: 2.5rem;
         text-align: center;
         font-weight: bold;
+        color: black;
     }
     .containerforsubmit {
         grid-area: topright;
         width: 6rem;
         height: 2.5rem;
+        color: black;
     }
     .buttonforsubmit {
         background-color: #eb7864;
@@ -215,11 +246,25 @@ html {
         width: 6rem;
         height: 2.5rem;
         font-weight: bold;
+        color: black;
     }
     .containerfortheoutputsection {
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
         width: 20rem;
+    }
+    .settings {
+        position: absolute;
+        top: -0.9rem;
+        left: 17.9rem;
+        right: 0rem;
+        bottom: 1rem;
+        z-index: 5;
+    }
+    .settingsimage {
+        width: 1rem;
+        height: 1rem;
     }
 }
