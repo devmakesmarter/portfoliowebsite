@@ -190,8 +190,8 @@ const handleStart = () => {
  const startContent =  
 
  <div className="projektdescription" >
-    <h1>Projektbeschreibung</h1>
-    <p id="Projektbeginn" >Dieses Quiz habe ich selbst programmiert. Viel Erfolg!</p>
+    <h1>Bitte drücken Sie Start</h1>
+    
     <button className="button" onClick={handleStart}  >Start</button>
 </div>
 

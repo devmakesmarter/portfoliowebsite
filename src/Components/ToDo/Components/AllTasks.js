@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import "../Components/AllTasks.css";
 
 export const AllTasks = ({ allInput, handleDelete,checkbox,getChecked }) => {
@@ -36,4 +36,4 @@ export const AllTasks = ({ allInput, handleDelete,checkbox,getChecked }) => {
 
                     export default AllTasks;
 
-                    // <div onClick={handleDelete}id={prev?.id} key={key}> {prev?.notiz} {prev.date} {prev.prio} </div>})}
+                
