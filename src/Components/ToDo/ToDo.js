@@ -46,15 +46,15 @@ export const ToDo = () => {
 
     const handleDelete = (e) => {
         const idnumber = parseInt(e.target.id);
-        console.log(e.target.id);
+        
 
         
         setAllInput(allInput.filter(prev => prev.id != idnumber));
-        console.log(checkbox);
+        
        
     }
 
-    console.log(allInput);
+    
 
 
 
@@ -66,7 +66,7 @@ export const ToDo = () => {
                 <div className="containerfortheinputsection" > 
                     <form className="formfortheinputsection" onSubmit={handleSubmit}>
                         <div className="containerforinputtext"> 
-                            <input className="inputfieldtext" onChange={getInputValue} type="text" value={inputValue} placeholder="Bitte tippen Sie hier" required ></input>
+                            <input className="inputfieldtext" onChange={getInputValue} type="text" value={inputValue} placeholder="Bitte tippen Sie hier" maxLength="50" required ></input>
                         </div>
                         <div className="containerfordate"> 
                             <input className="inputfielddate"  onChange={getDate}  type="date" value={date}  required   ></input>

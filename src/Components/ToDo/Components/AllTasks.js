@@ -16,7 +16,7 @@ export const AllTasks = ({ allInput, handleDelete,checkbox,getChecked }) => {
                         
                                
                                 <div key={key} id={key} className="parentfortheoutput" >
-                                <div className="containerforcheckbox"  >   <input onChange={getChecked} className="checkbox" type="checkbox" value={checkbox}></input> </div>
+                               
                                 <div className="containerfortheoutputtext" >{prev?.notiz}</div>
                                 <div className="containerfortheoutputdate" >{prev?.date} </div>
                                 <div className="containerfortheoutputprio" > {prev?.prio} </div>
