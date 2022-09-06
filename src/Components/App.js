@@ -37,7 +37,12 @@ function App() {
 
     <ProjektSeparator head="Projekt 2 " description="Eine ToDo-Liste mit verschiedenen Eigenschaften. Unter anderem ist es möglich, ein Zieldatum einzugeben und auch eine Prio zu vergeben" />
     <br></br>
-    <ToDo/><br></br><br></br><br></br><br></br><br></br><br></br>
+    <ToDo/><br></br><br></br>
+    <ProjektSeparator head="Projekt 3 " description="Ist in Planung und kommt noch!" />
+
+
+    <br></br><br></br><br></br><br></br><br></br><br></br>
+
     <Footer/>
     <Switch>
     <Route exact path="/src/Components/Rechtliches/Impressum.js">

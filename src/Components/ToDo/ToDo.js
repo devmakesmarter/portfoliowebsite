@@ -17,6 +17,7 @@ export const ToDo = () => {
     const [filter, setFilter] = useState(0);
     const [settingsfortodo, setSettingsForToDo] = useState(false);
 
+    var wert;
 
     const number = () =>{
        return Math.floor(Math.random() * 1008642310)
@@ -25,21 +26,40 @@ export const ToDo = () => {
 
      useEffect( ()=> {
 
-        
-            // setAllInput(allInput.sort((a,b) => {
+            //Prio Aufsteigend
+
+            //  setAllInput(allInput.sort((a,b) => {
             //             return a.prio-b.prio
             //        }))
 
+            // Prio absteigend
+            //        setAllInput(allInput.sort((a,b) => {
+            //         return b.prio-a.prio
+            //    }))
 
-                   setAllInput(allInput.sort((a,b) => {
-                    const datea = new Date(a.date);
-                    const dateb = new Date(b.date);
+            //         // Datum aufsteigend sortierung 
 
-                    return datea -dateb
-               }))
+            //        setAllInput(allInput.sort((a,b) => {
+            //         const datea = new Date(a.date);
+            //         const dateb = new Date(b.date);
+
+            //         return datea -dateb
+            //    }))
+
+
+
+                // Datum absteigend sortierung 
+
+        //        setAllInput(allInput.sort((a,b) => {
+        //         const datea = new Date(a.date);
+        //         const dateb = new Date(b.date);
+
+        //         return dateb -datea
+        //    }))
 
                 setInputValue("");
                 setChildReRender(number());
+                
      },[allInput]) 
 
  
@@ -84,10 +104,55 @@ export const ToDo = () => {
     }
 
     const closeSetteingsFromToDo = () => {
-
         setSettingsForToDo(false);
     }
 
+    const handleSettingsToDo = (e) =>{
+
+        const wert = e.target.value; 
+
+        if(wert==="Datumaufsteigend"){
+           // Datum aufsteigend sortierung 
+                setAllInput(allInput.sort((a,b) => {
+                const datea = new Date(a.date);
+                const dateb = new Date(b.date);
+                setChildReRender(number());
+                return datea -dateb
+                    }))
+        }
+
+        else if(wert==="Datumabsteigend"){
+            // Datum absteigend sortierung 
+                 setAllInput(allInput.sort((a,b) => {
+                 const datea = new Date(a.date);
+                 const dateb = new Date(b.date);
+                 setChildReRender(number());
+                 return dateb -datea
+                    }))
+
+        }
+
+        else if(wert==="Prioaufsteigend"){
+             //Prio Aufsteigend
+
+                setAllInput(allInput.sort((a,b) => {
+                setChildReRender(number());
+                return a.prio-b.prio
+                    }))
+        }
+
+        else if(wert==="Prioabsteigend"){
+
+             // Prio absteigend
+                setAllInput(allInput.sort((a,b) => {
+                return b.prio-a.prio
+                    }))
+
+
+        }
+        
+
+    }
 
 
 
@@ -117,7 +182,7 @@ export const ToDo = () => {
                     </div>
                     <br></br><br></br>
                 <div className="containerfortheoutputsection"> 
-                <div className="settings"  ><img onClick={openSetteingsFromToDo} className="settingsimage" src={icon} alt=""></img> <PopUpone settingsfortodo={settingsfortodo} closesettingsfortodo={closeSetteingsFromToDo} /> </div>
+                <div className="settings"  ><img onClick={openSetteingsFromToDo} className="settingsimage" src={icon} alt=""></img> <PopUpone settingsfortodo={settingsfortodo} closesettingsfortodo={closeSetteingsFromToDo} handleSettingsToDo={handleSettingsToDo} /> </div>
 
                 <AllTasks allInput={allInput} handleDelete={handleDelete} childReRender={childReRender} />
                 

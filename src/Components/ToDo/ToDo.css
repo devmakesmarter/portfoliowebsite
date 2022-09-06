@@ -67,6 +67,7 @@ html {
 .inputfieldtext {
     border-style: solid;
     border-radius: 0.5rem;
+    border-color: black;
     background-color: rgba(184, 181, 181, 0.5);
     width: 28rem;
     height: 5rem;
@@ -213,7 +214,6 @@ html {
         text-align: center;
         background-color: rgba(184, 181, 181, 0.5);
         font-weight: bold;
-        color: black;
     }
     .containerfornumber {
         grid-area: bottomright;

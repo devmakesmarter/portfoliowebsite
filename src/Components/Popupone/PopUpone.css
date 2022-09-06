@@ -61,8 +61,16 @@ html {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    flex-direction: column-reverse;
     padding: 0.3rem;
     font-size: 0.75rem;
+}
+
+.adivforbuttonselectlist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .divforbutton {
@@ -79,7 +87,6 @@ html {
 
 .abuttonself {
     background-color: rgba(207, 201, 201, 0.8);
-    min-width: 80%;
     cursor: pointer;
     font-size: 1.5rem;
     font-weight: bolder;
@@ -89,4 +96,5 @@ html {
     border-radius: 0.5rem;
     padding: 0.3rem;
     color: black;
+    width: 14rem;
 }
