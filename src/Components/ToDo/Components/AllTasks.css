@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.containerfortheoutput {
+    width: 100%;
+}
+
+.parentfortheoutput {
+    display: grid;
+    grid-template-columns: 25rem 7rem 5.2rem;
+    grid-template-rows: auto auto;
+    grid-template-areas: "topleftleftleft topleftleft topleft " "down down down";
+    border: 0.1rem;
+    border-style: solid;
+    border-radius: 1rem;
+    margin: 0.5rem;
+    padding: 0.8rem;
+}
+
+.containerfortheoutputtext {
+    grid-area: topleftleftleft;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: black;
+}
+
+.containerfortheoutputdate {
+    grid-area: topleftleft;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: black;
+}
+
+.containerfortheoutputprio {
+    grid-area: topleft;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: black;
+}
+
+.buttonfordelete {
+    grid-area: down;
+    color: black;
+}
+
+@media only screen and (max-width: 800px) {
+    .parentfortheoutput {
+        display: grid;
+        grid-template-columns: 12rem 3.5rem 3rem;
+        grid-template-rows: auto auto;
+        grid-template-areas: "topleftleftleft topleftleft topleft " "down down down";
+        border: 0.1rem;
+        border-style: solid;
+        border-radius: 1rem;
+        margin: 0.3rem;
+        padding: 0.3rem;
+    }
+    .containerfortheoutputtext {
+        grid-area: topleftleftleft;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.7rem;
+        color: black;
+    }
+    .containerfortheoutputdate {
+        grid-area: topleftleft;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.7rem;
+        text-align: center;
+        color: black;
+    }
+    .containerfortheoutputprio {
+        grid-area: topleft;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.7rem;
+        color: black;
+    }
+    .buttonfordelete {
+        grid-area: down;
+        font-size: 0.7rem;
+        color: black;
+    }
+}

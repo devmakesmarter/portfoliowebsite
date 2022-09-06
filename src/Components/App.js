@@ -9,7 +9,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Datenschutz } from "./Rechtliches/Datenschutz";
 import {Footer} from "../Components/Rechtliches/Footer";
 import {Uebermich} from "../Components/Uebermich/Uebermich";
-
+import {ToDo} from "../Components/ToDo/ToDo";
 
 
 
@@ -32,7 +32,8 @@ function App() {
     <SkillsComponent/>
     <Uebermich/>
     <Quizapp/>
-<br></br><br></br><br></br>
+<br></br><br></br>
+    <ToDo/><br></br><br></br><br></br><br></br><br></br><br></br>
     <Footer/>
     <Switch>
     <Route exact path="/src/Components/Rechtliches/Impressum.js">

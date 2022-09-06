@@ -1,0 +1,225 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    font-size: 16px;
+}
+
+.containercontainercontainercontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.2rem;
+    border-style: solid;
+    border-radius: 0.3rem;
+}
+
+.containercontainercontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.containerforheadline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem;
+    border: 0.5rem;
+    border-style: solid;
+    border-color: black;
+    border-radius: 0.6rem;
+    width: 40rem;
+}
+
+.containerforheadline h1 {
+    font-size: 2rem;
+}
+
+.containerfortheinputsection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formfortheinputsection {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: 28rem 12rem;
+    grid-template-rows: auto auto;
+    grid-template-areas: "topleft topright" "bottomleft bottomright";
+}
+
+.containerforinputtext {
+    grid-area: topleft;
+    width: 28rem;
+    height: 5rem;
+}
+
+.inputfieldtext {
+    border-style: solid;
+    border-radius: 0.5rem;
+    background-color: rgba(184, 181, 181, 0.5);
+    width: 28rem;
+    height: 5rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.containerfordate {
+    grid-area: bottomleft;
+    width: 28rem;
+    height: 5rem;
+}
+
+.inputfielddate {
+    border: 0.1rem;
+    border-style: solid;
+    border-radius: 0.5rem;
+    width: 28rem;
+    height: 5rem;
+    text-align: center;
+    background-color: rgba(184, 181, 181, 0.5);
+    font-weight: bold;
+}
+
+.containerfornumber {
+    grid-area: bottomright;
+    width: 12rem;
+    height: 5rem;
+}
+
+.inputfieldnumber {
+    background-color: rgba(184, 181, 181, 0.5);
+    border: 0.1rem;
+    border-style: solid;
+    border-radius: 0.5rem;
+    width: 12rem;
+    height: 5rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.containerforsubmit {
+    grid-area: topright;
+    width: 12rem;
+    height: 5rem;
+}
+
+.buttonforsubmit {
+    background-color: #eb7864;
+    border: 0.1rem;
+    border-style: solid;
+    border-radius: 0.5rem;
+    width: 12rem;
+    height: 5rem;
+    font-weight: bold;
+}
+
+.containerfortheoutputsection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40rem;
+}
+
+@media only screen and (max-width: 800px) {
+    .containercontainercontainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 0.2rem;
+    }
+    .containerforheadline {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0.2rem;
+        border: 0.2rem;
+        border-style: solid;
+        border-color: black;
+        border-radius: 0.6rem;
+        width: 20rem;
+    }
+    .containerforheadline h1 {
+        font-size: 1rem;
+    }
+    .formfortheinputsection {
+        display: grid;
+        gap: 0.5rem;
+        grid-template-columns: 14rem 6rem;
+        grid-template-rows: auto auto;
+        grid-template-areas: "topleft topright" "bottomleft bottomright";
+    }
+    .containerforinputtext {
+        grid-area: topleft;
+        width: 14rem;
+        height: 2.5rem;
+    }
+    .inputfieldtext {
+        border-style: solid;
+        border-radius: 0.5rem;
+        background-color: rgba(184, 181, 181, 0.5);
+        width: 14rem;
+        height: 2.5rem;
+        text-align: center;
+        font-weight: bold;
+    }
+    .containerfordate {
+        grid-area: bottomleft;
+        width: 14rem;
+        height: 2.5rem;
+    }
+    .inputfielddate {
+        border: 0.1rem;
+        border-style: solid;
+        border-radius: 0.5rem;
+        width: 14rem;
+        height: 2.5rem;
+        text-align: center;
+        background-color: rgba(184, 181, 181, 0.5);
+        font-weight: bold;
+    }
+    .containerfornumber {
+        grid-area: bottomright;
+        width: 6rem;
+        height: 2.5rem;
+    }
+    .inputfieldnumber {
+        background-color: rgba(184, 181, 181, 0.5);
+        border: 0.1rem;
+        border-style: solid;
+        border-radius: 0.5rem;
+        width: 6rem;
+        height: 2.5rem;
+        text-align: center;
+        font-weight: bold;
+    }
+    .containerforsubmit {
+        grid-area: topright;
+        width: 6rem;
+        height: 2.5rem;
+    }
+    .buttonforsubmit {
+        background-color: #eb7864;
+        border: 0.1rem;
+        border-style: solid;
+        border-radius: 0.5rem;
+        width: 6rem;
+        height: 2.5rem;
+        font-weight: bold;
+    }
+    .containerfortheoutputsection {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20rem;
+    }
+}
