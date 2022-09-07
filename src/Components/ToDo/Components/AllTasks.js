@@ -4,7 +4,7 @@ import "../Components/AllTasks.css";
 export const AllTasks = ({ allInput, handleDelete, childReRender }) => {
 
         
-
+       // Dieser Komponente ist für das rendern der ToDo Aufgaben verantwortlich. 
        
 
         return (

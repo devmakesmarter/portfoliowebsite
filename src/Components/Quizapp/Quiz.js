@@ -125,8 +125,7 @@ const handleRestart = () => {
     setNumber(Math.floor(Math.random() * (arrayAskibil.length)));
     setScore(0);
     setCountdown(20);
-
-      setShouldCountdownStart(true);
+    setShouldCountdownStart(true);
 }
 
 // Dieses if sorgt dafür, dass wenn der Countdown abläuft, der Spieler einen Punkt abgezogen bekommt.
@@ -166,11 +165,11 @@ const quizConti =
     <div>     
      <div className="quizborderborder" >
         <div className="quizborder">
-        <h1 id="counter" className={countdown >= 11 ? "testb" : "testa"} >Verbleibende Zeit<br></br> {countdown}</h1>
-        <h1>Ihr aktueller Punktestand ist: <br></br> {score}</h1>
-        <h3>{arrayAskibil[number].Question}</h3>
-        <button value={arrayAskibil[number].AnswerOneValue} className="button" title={arrayAskibil[number].SpecialKey}  onClick={handleClick}  >{arrayAskibil[number].AnswerOne}  </button>
-        <button value={arrayAskibil[number].AnswerTwoValue} className="button" title={arrayAskibil[number].SpecialKey}  onClick={handleClick}   >{arrayAskibil[number].AnswerTwo}</button>
+            <h1 id="counter" className={countdown >= 11 ? "testb" : "testa"} >Verbleibende Zeit<br></br> {countdown}</h1>
+            <h1>Ihr aktueller Punktestand ist: <br></br> {score}</h1>
+            <h3>{arrayAskibil[number].Question}</h3>
+            <button value={arrayAskibil[number].AnswerOneValue} className="button" title={arrayAskibil[number].SpecialKey}  onClick={handleClick}  >{arrayAskibil[number].AnswerOne}  </button>
+            <button value={arrayAskibil[number].AnswerTwoValue} className="button" title={arrayAskibil[number].SpecialKey}  onClick={handleClick}   >{arrayAskibil[number].AnswerTwo}</button>
         </div>
      </div>
     </div>
@@ -190,7 +189,7 @@ const handleStart = () => {
  const startContent =  
 
  <div className="projektdescription" >
-    <h1>Bitte drücken Sie Start</h1>
+    <h1>Quiz</h1>
     
     <button className="button" onClick={handleStart}  >Start</button>
 </div>
