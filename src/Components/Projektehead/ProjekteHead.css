@@ -14,8 +14,7 @@ html {
 }
 
 .aprojektdescription {
-    border: 0.2rem;
-    border-style: solid;
+    background-color: rgba(128, 128, 128, 0.3);
     margin-top: 50px;
     display: flex;
     align-items: center;

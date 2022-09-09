@@ -6,7 +6,8 @@ import toolbox from "../Skills/Picutres/tools 1280 960.jpg";
 import pictureone from "../Popup/pexels-lilartsy-1194775.jpg";
 import picturetwo from "../Popup/pexels-pixabay-159866.jpg";
 import picturethree from "../Popup/pexels-bogdan-dirică-1645668.jpg";
-import { PopUp } from "../Popup/PopUp";
+import { PopUp } from "../Popup/Popup";
+import { flushSync } from "react-dom";
 
 
 
@@ -37,12 +38,17 @@ export const SkillsComponent = () => {
         const key = e.target.dataset.value; 
     
     // hier wird die Beschreibung tranferiert. 
-        setValueOfProp((prev) => {
 
-             prev = key;
-             return key;
+       if(typeof(key) ==="string"){
+        setValueOfProp((prev) => {   
+             return prev= key;
+        }   )}
+        else{
+            setValueOfProp("Es gab leider ein technisches Problem. Bitte schließen und öffnen Sie das Fenster nochmal. Danke")
+        }
 
-        }   );
+
+
     // hier wird die Sichtbarkeit des Popup eingestellt
         setVisible(true);
     
