@@ -9,6 +9,70 @@ html {
     font-size: 16px;
 }
 
+.wrapperofallwrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+
+.wrapperofall {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 50rem;
+    margin: 0.3rem;
+    min-width: 22rem;
+}
+
+.headsection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border: 0.3rem;
+    border-color: black;
+    border-style: solid;
+    width: 100%;
+    border-bottom: 0;
+    max-height: 30%;
+    background-color: rgba(128, 128, 128, 0.3);
+}
+
+.wrapperforprojectnumber {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.3rem;
+    width: 30%;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.wrapperforprojectdescription {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.7rem;
+    width: 70%;
+}
+
+.wrapperforcontent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border: 0.3rem;
+    border-color: black;
+    border-style: solid;
+    width: 100%;
+    min-height: 20rem;
+}
+
+
+/*
 .h1 {
     font-size: clamp(1.5rem, 0.4rem + 2.5vw, 2rem);
 }
@@ -30,3 +94,4 @@ html {
 .aaprojektdescription p {
     font-size: 0.8rem;
 }
+*/

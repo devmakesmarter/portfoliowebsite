@@ -1,4 +1,4 @@
-import "../Popup/PopUp.css";
+import "../Popup/Popup.css";
 
 
 
