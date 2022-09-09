@@ -32,13 +32,18 @@ function App() {
     <SkillsComponent/>
     <Uebermich/>
     <ProjekteHead/>
-    <ProjektSeparator head="Projekt 1 " description="Dieses Quiz verfügt über verschiedene Eigentschaften. Insgesamt gibt es acht Fragen welche beantwortbar sind. Es gibt einen Timer der in jeder Frage läuft und nach Ablauf einen Punkt abzieht. Gleichzeitig erhält man für richtig beantwortete Fragen Punkte. Es ist möglich seinen Highscore pro Rund zu speichern" />
-    <Quizapp/>
+    <ProjektSeparator head="P-1 " project={<Quizapp/>} description="Dieses Quiz verfügt über verschiedene Eigentschaften. Insgesamt gibt es acht Fragen welche beantwortbar sind. Es gibt einen Timer der in jeder Frage läuft und nach Ablauf einen Punkt abzieht. Gleichzeitig erhält man für richtig beantwortete Fragen Punkte. Es ist möglich seinen Highscore pro Rund zu speichern" />
+    
+    
+    <ProjektSeparator head="P-2" project={<ToDo/>} description="Eine ToDo-Liste mit verschiedenen Eigenschaften. Unter anderem ist es möglich, ein Zieldatum einzugeben und auch eine Prio zu vergeben. Die erstellen Aufgaben können nach Datum oder Prio auf- und absteigend sortiert werden." />
+   
+ 
 
-    <ProjektSeparator head="Projekt 2 " description="Eine ToDo-Liste mit verschiedenen Eigenschaften. Unter anderem ist es möglich, ein Zieldatum einzugeben und auch eine Prio zu vergeben. Die erstellen Aufgaben können nach Datum oder Prio auf- und absteigend sortiert werden." />
+    
     <br></br>
-    <ToDo/><br></br><br></br>
-    <ProjektSeparator head="Projekt 3 " description="Ist in Planung und kommt noch!" />
+    <br></br><br></br>
+   
+   
 
 
     <br></br><br></br><br></br><br></br><br></br><br></br>

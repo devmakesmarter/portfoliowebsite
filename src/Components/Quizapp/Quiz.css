@@ -14,11 +14,10 @@ html {
 }
 
 .projektdescription {
-    border: 0.2rem;
+    border: 0.05rem;
     border-color: #eb7864;
     border-style: solid;
     border-radius: 10px;
-    margin-top: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,7 +39,6 @@ html {
 }
 
 .quizborderborder {
-    margin-top: 50px;
     display: flex;
     align-items: center;
     justify-content: center;

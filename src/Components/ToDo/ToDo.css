@@ -13,7 +13,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 0.2rem;
+    border: 0.05rem;
     border-style: solid;
     border-radius: 0.3rem;
 }
