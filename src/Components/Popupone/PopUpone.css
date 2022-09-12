@@ -54,16 +54,14 @@ html {
     font-weight: bolder;
 }
 
-.adescription {
+.adescriptiona {
     grid-area: description;
-    font-size: 0.5rem;
+    font-size: 0.3rem;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
+    justify-content: center;
     flex-direction: column-reverse;
-    padding: 0.3rem;
-    font-size: 0.75rem;
+    font-size: 0.4rem;
 }
 
 .adivforbuttonselectlist {
@@ -71,6 +69,10 @@ html {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.emptyer {
+    width: 200px;
 }
 
 .divforbutton {
@@ -88,7 +90,7 @@ html {
 .abuttonself {
     background-color: rgba(207, 201, 201, 0.8);
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: bolder;
     border: 0.1rem;
     border-style: solid;

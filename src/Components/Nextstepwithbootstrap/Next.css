@@ -1,0 +1,12 @@
+#convonbtzsv.container {}
+
+#convonbtzsv .row {}
+
+#convonbtzsv .carousel-item img {
+    /*
+    object-fit: cover;
+    position: center;
+    overflow: hidden;
+    */
+    max-height: 0px;
+}

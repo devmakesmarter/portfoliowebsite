@@ -12,8 +12,8 @@ import {Uebermich} from "../Components/Uebermich/Uebermich";
 import {ToDo} from "../Components/ToDo/ToDo";
 import {ProjekteHead} from "./Projektehead/ProjekteHead"
 import {ProjektSeparator} from "./Projektseparator/ProjektSeparator";
-
-
+import {Firsstepwithbootstrap} from "../Components/Firststepwithbootstrap/Firsstepwithbootstrap";
+import {Next} from "../Components/Nextstepwithbootstrap/Next";
 function App() {
   return (
 
@@ -37,8 +37,11 @@ function App() {
     
     <ProjektSeparator head="N-2" project={<ToDo/>} description="Eine ToDo-Liste mit verschiedenen Eigenschaften. Unter anderem ist es möglich, ein Zieldatum einzugeben und auch eine Prio zu vergeben. Die erstellen Aufgaben können nach Datum oder Prio auf- und absteigend sortiert werden." />
    
- 
+     <Firsstepwithbootstrap/>
+     <br></br><br></br><br></br><br></br><br></br><br></br>
 
+
+    <Next/>
     
     <br></br>
     <br></br><br></br>

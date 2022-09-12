@@ -22,7 +22,7 @@ export const Footer = () => {
         <ul>
             <p><a href="/src/Components/Rechtliches/Datenschutz.js" target="_blank" >Datenschutz</a></p>
         </ul>
-        <ul><a href="#"  onClick={() => window.openUcSettings()}>Cookie-Einstellungen</a></ul>
+        <ul> <p>  <a href="#"  onClick={() => window.openUcSettings()}>Cookie-Einstellungen</a></p></ul>
         
         
       
