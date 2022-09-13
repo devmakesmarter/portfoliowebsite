@@ -40,7 +40,7 @@ export const PopUpone = ({settingsfortodo, closesettingsfortodo,handleSettingsTo
                                 <button onClick={handleSettingsToDo} className="abuttonself" value="Prioaufsteigend" >Prio aufsteigend</button>
                                 <button onClick={handleSettingsToDo} className="abuttonself" value="Prioabsteigend" >Prio absteigend</button>
                             </div>
-                            
+                        <div className="emptyer">Sortierung To-Do </div>
                         </div>
                         <div className="divforbutton"><button className="abuttonself" onClick={closesettingsfortodo}>Schliessen</button></div>
                       </div> 

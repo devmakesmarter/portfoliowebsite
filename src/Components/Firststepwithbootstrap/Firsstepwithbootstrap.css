@@ -4,7 +4,9 @@
     width: 100%;
 }
 
-#caruselspeziale .col {}
+#caruselspeziale .col0padding {
+    padding: 0;
+}
 
 .carousel {}
 
@@ -15,14 +17,25 @@
 
 /* GANZ GANZ wichtig!!!! dem Carousel eine Unique ID geben sonst gilt das für alle Carouselle*/
 
-#caruselspeziale .carousel-item img {
-    /*
-    object-fit: cover;
+#caruselspeziale img {
+    /* height: 100%; */
+    /* object-fit: cover;
     position: center;
-    overflow: hidden;
-    */
+    overflow: hidden; */
 }
 
 .d-block {}
 
 .spezialimgdiv.img {}
+
+.full {
+    /* position: absolute;
+    left: 0;
+    right: 0; */
+}
+
+.spezial {
+    min-width: 100%;
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
+}

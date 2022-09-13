@@ -1,5 +1,6 @@
 
 import React, {useState} from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "../Skills/SkillsComponent.css";
 import { skillList } from "./SkillList";
 import toolbox from "../Skills/Picutres/tools 1280 960.jpg";
@@ -8,6 +9,8 @@ import picturetwo from "../Popup/pexels-pixabay-159866.jpg";
 import picturethree from "../Popup/pexels-bogdan-dirică-1645668.jpg";
 import { PopUp } from "../Popup/Popup";
 import { flushSync } from "react-dom";
+import { Container, Row, Col, Carousel  } from 'react-bootstrap';
+
 
 
 

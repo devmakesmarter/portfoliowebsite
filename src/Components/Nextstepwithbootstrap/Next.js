@@ -60,15 +60,13 @@ export  const Next =  () => {
     </Carousel>
             </Row>
             <Row>
-                <Col className="col-6">aaaaaaaaaaaa</Col>
-                <Col>bbbbbbbbbbbbbbb</Col>
-                <Col>cccccccccccccccccccc</Col>
+                <Col className="col-6 d-flex justify-content-center align-items-center " ><p> jdkl sdassad aasdsa dwwewd eqdsghzjzthf  asdas  d faskl f sdklfj </p></Col>
+                <Col>bbbbbbbbbbbbbbb sdfsda dsf asdfds afsdfewffsa fweeasfdsfewawc sfsdaf ewf awefas fsa</Col>
+                <Col>ccccccccccccccccccc sfsad wefg trhztjztbd ffsdvsfe vfgrfecvfe c</Col>
                 <Col>dddddddddddddd</Col>
-                
-
-                
-                
                </Row>
+
+               
 
 
         </Container>

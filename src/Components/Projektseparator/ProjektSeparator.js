@@ -1,6 +1,7 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./ProjektSeparator.css";
-
+import { Container, Row, Col, Carousel  } from 'react-bootstrap';
 export  const ProjektSeparator = ({head, description, project}) => {
 
 
@@ -13,8 +14,26 @@ export  const ProjektSeparator = ({head, description, project}) => {
 
 
     <>
+        <Container id="projectseparator238525">
+          <Row>
+            <Col className="col-3 d-flex justify-content-center align-items-center  borderforcallindiviual "><h1>{head} </h1></Col>
+            <Col className="col-9 borderforcallindiviualtwo  "  > <p> {description} </p> </Col>
+          </Row>
+          <Row>
+            <Col className="col-12  borderforcallindiviualthree "> {project} </Col>
+          </Row>
+        </Container>
 
-<div class="wrapperofallwrapper">
+
+    
+    
+    
+
+    </>
+
+
+       /* <div id="projectseparator238525"> 
+    <div class="wrapperofallwrapper">
     <div class="wrapperofall">
       <div class="headsection">
       <div class="wrapperforprojectnumber">{head}
@@ -25,16 +44,8 @@ export  const ProjektSeparator = ({head, description, project}) => {
       <div class="wrapperforcontent">{project}
       </div>
     </div>
-</div>
-    
-    
-    
-    
-
-    </>
-
-
-
+  </div> 
+  </div> */
 
 
 
@@ -46,6 +57,10 @@ export  const ProjektSeparator = ({head, description, project}) => {
   
   )
 }
+
+
+
+
 
 export default ProjektSeparator;
 
