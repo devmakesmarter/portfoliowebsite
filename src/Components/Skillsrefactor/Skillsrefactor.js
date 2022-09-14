@@ -20,14 +20,14 @@ export const Skillsrefactor = () => {
         </Row>
 
         <Row className="bg-light adjustrow" > 
-        <Col className="adjust789465">Javascript</Col>
-        <Col className="adjust789465"  >React.js</Col>
-        <Col  className="adjust789465"   >Bootstrap</Col>
-        <Col className="adjust789465"  >Html</Col>
-        <Col className="adjust789465"  >GIT</Col>
-        <Col className="adjust789465" >CSS</Col>
-        <Col className="adjust789465" >SCRUM</Col>
-        <Col className="adjust789465" >Office</Col>
+        <Col className="adjust789465 col-3">Javascript</Col>
+        <Col className="adjust789465 col-3"  >React.js</Col>
+        <Col  className="adjust789465 col-3 "   >Bootstrap</Col>
+        <Col className="adjust789465 col-3 "  >Html</Col>
+        <Col className="adjust789465 col-3"  >GIT</Col>
+        <Col className="adjust789465 col-3 " >CSS</Col>
+        <Col className="adjust789465 col-3" >SCRUM</Col>
+        <Col className="adjust789465 col-3" >Office</Col>
         
 
         </Row>
