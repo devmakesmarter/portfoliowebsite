@@ -1,0 +1,15 @@
+#aboutmewithbootstrap89465648 img {
+    object-fit: fill;
+    position: center;
+    overflow: hidden;
+    height: 80vh;
+}
+
+@media screen and (max-width: 992px) {
+    #aboutmewithbootstrap89465648 img {
+        object-fit: fill;
+        position: center;
+        overflow: hidden;
+        height: 50vh;
+    }
+}

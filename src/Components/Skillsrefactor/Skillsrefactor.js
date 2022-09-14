@@ -24,7 +24,7 @@ export const Skillsrefactor = () => {
         <Col className="adjust789465"  >React.js</Col>
         <Col  className="adjust789465"   >Bootstrap</Col>
         <Col className="adjust789465"  >Html</Col>
-        <Col className="adjust789465"  >AGIL</Col>
+        <Col className="adjust789465"  >GIT</Col>
         <Col className="adjust789465" >CSS</Col>
         <Col className="adjust789465" >SCRUM</Col>
         <Col className="adjust789465" >Office</Col>

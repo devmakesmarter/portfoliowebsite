@@ -16,6 +16,8 @@ import {Firsstepwithbootstrap} from "../Components/Firststepwithbootstrap/Firsst
 import {Next} from "../Components/Nextstepwithbootstrap/Next";
 import {Skillsrefactor} from "../Components/Skillsrefactor/Skillsrefactor";
 import {Navbarwithboots} from "../Components/Navbarwithboots/Navbarwithboots";
+import {Aboutmewithbootsrap} from "../Components/Aboutmewithbootsrap/Aboutmewithbootsrap";
+
 function App() {
   return (
 
@@ -38,6 +40,8 @@ function App() {
     <Skillsrefactor/>
     <br></br><br></br>
    
+    {/* <Aboutmewithbootsrap/> */}
+
     <br></br>
     <ProjekteHead/>
     <br></br>
