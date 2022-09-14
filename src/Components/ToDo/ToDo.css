@@ -9,14 +9,19 @@ html {
     font-size: 16px;
 }
 
+.zeropaddingandmargin87452187 {
+    padding: 0;
+    margin: 0;
+}
+
 .containercontainercontainercontainer {
     display: flex;
     justify-content: center;
     align-items: center;
     border: 0.1rem;
-    border-style: solid;
+    /* border-style: solid;
     border-radius: 0.3rem;
-    border-color: rgba(0, 69, 165, 1);
+    border-color: rgba(0, 69, 165, 1); */
 }
 
 .containercontainercontainer {

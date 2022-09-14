@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import  ReactDOM,{flushSync} from 'react-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "../Quizapp/Quiz.css";
+import { Container, Row, Col, Carousel,Nav, Button,Navbar,NavDropdown, Card } from 'react-bootstrap';
+
 import {Questions} from "./Data";
 
 
@@ -138,26 +141,39 @@ if(countdown === 0){
 const quizConti = 
     // hier arbeite ich mit eine Tenary Operator. Wenn es keine Fragen mehr gibt, dann kommt das Feld mit dem Punktestand. Sonst die Fragen. 
 <div>
+
     {arrayAskibil.length === 0 ? 
 
     (   
+            
+
     <div className="quizborderborder" >   
-        <div className="quizborder">
-            <h1>Herzlichen Glückwunsch Sie haben folgenden Punktestand erreicht:<br>
-            </br> {score}</h1>
-            <h3>Alle Fragen sind vorbei</h3>
-            <button  className="button" onClick={handleRestart}>Neustart</button>
-            <button  className="button" onClick={handlehistoricScore}>Punktestand speichern</button>
-            <div>
-            <h1>Ihre bisher erreichen Punktestände sind wie folgt:</h1>
-            {/* der historische Punktestand ist im histroicScore gespeichert*/}
-            {historicScore.map((prev,key)=>{
-             return <h2 key={key}> Ihr Ergebnis in Runde {key + 1} ist {prev}</h2>
+
+            <Container>
+                <Row>
+                    <Col className="col-12 p-2 d-flex justify-content-center align-items-center" ><h4 className="text-center">Herzlichen Glückwunsch Sie haben folgenden Punktestand erreicht: </h4></Col>
+                    <Col className="col-12 p-2 d-flex justify-content-center align-items-center "><h5 className="font-weight-bold">{score}</h5></Col>
+                </Row>
+                <Row>
+                    <Col className="col-12 col-md-6 p-2  d-flex justify-content-center align-items-center "><button  className="buttoni" onClick={handleRestart}>Neustart</button></Col>
+                    <Col className="col-12 col-md-6  p-2  d-flex justify-content-center align-items-center "> <button  className="buttoni" onClick={handlehistoricScore}>Punktestand speichern</button></Col>
+                </Row>
+                <Row>
+                    <Col className=" col-12 d-flex justify-content-center align-items-center" > <h4 className="text-center">Ihre bisher erreichen Punktestände sind wie folgt:</h4></Col>
+                    {historicScore.map((prev,key)=>{
+                      return <Col className=" col-12 p1 d-flex justify-content-center align-items-center" key={key}> <h5 className="text-center">Ihr Ergebnis in Runde {key + 1} ist {prev}</h5></Col>
                 } )}
-            </div>
-        </div>
-    </div>  
+                </Row>
+
+
+            </Container>
+
+
+
+    </div>   
      )  
+
+
 
      :
     // Die Klammern sind wichtig, wenn JSX gerendert werden soll...
@@ -168,8 +184,8 @@ const quizConti =
             <h1 id="counter" className={countdown >= 11 ? "testb" : "testa"} >Verbleibende Zeit<br></br> {countdown}</h1>
             <h1>Ihr aktueller Punktestand ist: <br></br> {score}</h1>
             <h3>{arrayAskibil[number].Question}</h3>
-            <button value={arrayAskibil[number].AnswerOneValue} className="button" title={arrayAskibil[number].SpecialKey}  onClick={handleClick}  >{arrayAskibil[number].AnswerOne}  </button>
-            <button value={arrayAskibil[number].AnswerTwoValue} className="button" title={arrayAskibil[number].SpecialKey}  onClick={handleClick}   >{arrayAskibil[number].AnswerTwo}</button>
+            <button value={arrayAskibil[number].AnswerOneValue} className="buttoni" title={arrayAskibil[number].SpecialKey}  onClick={handleClick}  >{arrayAskibil[number].AnswerOne}  </button>
+            <button value={arrayAskibil[number].AnswerTwoValue} className="buttoni" title={arrayAskibil[number].SpecialKey}  onClick={handleClick}   >{arrayAskibil[number].AnswerTwo}</button>
         </div>
      </div>
     </div>
@@ -188,11 +204,17 @@ const handleStart = () => {
 
  const startContent =  
 
- <div className="projektdescription" >
-    <h1>Quiz</h1>
+    <Container> 
+    <Row>
+        <Col className="text-center"><h1 className="font-weight-bold">Quiz</h1></Col>
+    </Row>
     
-    <button className="button" onClick={handleStart}  >Start</button>
-</div>
+    <Row>
+        <Col className="p-2"> <button className="buttoni" onClick={handleStart}  >Start</button> </Col>
+        
+    </Row>
+   
+    </Container>
 
 return (
         <div> {vorBeginn === false ?  startContent :  quizConti  } </div>  
