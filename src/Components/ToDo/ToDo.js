@@ -126,7 +126,8 @@ export const ToDo = () => {
 
         const wert = e.target.value;
         setSortArtForTheToDoList(wert); 
-        setChildReRender(number())// Wichtig!! Damit das Child direkt Rerendert. Sonst ist es nur bei dem nächsten Rendern gültig. 
+        setSettingsForToDo(false);
+        setChildReRender(number());// Wichtig!! Damit das Child direkt Rerendert. Sonst ist es nur bei dem nächsten Rendern gültig. 
 
         // if(wert ==="Datumaufsteigend"){
         //    // Datum aufsteigend sortierung 
@@ -175,7 +176,7 @@ export const ToDo = () => {
     <>
         <div className="containercontainercontainercontainer" >
             <div className="containercontainercontainer"> 
-                <div className="containerforheadline"><h1> TO DO ´S</h1> </div>
+                <div className="containerforheadline"><h1 className="zeropaddingandmargin87452187"> TO DO ´S</h1> </div>
                 <div className="containerfortheinputsection" > 
                     <form className="formfortheinputsection" onSubmit={handleSubmit}>
                         <div className="containerforinputtext"> 

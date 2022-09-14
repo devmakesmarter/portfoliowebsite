@@ -39,7 +39,8 @@ export const Navbartwo = () => {
 
 
         // Die Navelemente bzw. deren Inhalts ist in der Items.js Datei gespeichert. Darüber erweiterbar. 
-        <div>
+        <>
+            <div id="navbartwouniqueid85412">
             <div className="image"  > 
               <img  id="logo" onClick={handleClick} src={logostripes} alt=""></img>
               </div>
@@ -54,7 +55,9 @@ export const Navbartwo = () => {
             </nav>
             </div> 
             </div>
-        </div>
+
+            </div>
+        </>
 
     )
 

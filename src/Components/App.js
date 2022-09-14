@@ -12,7 +12,11 @@ import {Uebermich} from "../Components/Uebermich/Uebermich";
 import {ToDo} from "../Components/ToDo/ToDo";
 import {ProjekteHead} from "./Projektehead/ProjekteHead"
 import {ProjektSeparator} from "./Projektseparator/ProjektSeparator";
-
+import {Firsstepwithbootstrap} from "../Components/Firststepwithbootstrap/Firsstepwithbootstrap";
+import {Next} from "../Components/Nextstepwithbootstrap/Next";
+import {Skillsrefactor} from "../Components/Skillsrefactor/Skillsrefactor";
+import {Navbarwithboots} from "../Components/Navbarwithboots/Navbarwithboots";
+import {Aboutmewithbootsrap} from "../Components/Aboutmewithbootsrap/Aboutmewithbootsrap";
 
 function App() {
   return (
@@ -26,19 +30,36 @@ function App() {
     <div className="App">
 
 
-    <br></br>
-    <Navbartwo/>
-    <br></br>
-    <SkillsComponent/>
-    <Uebermich/>
-    <ProjekteHead/>
-    <ProjektSeparator head="P-1 " project={<Quizapp/>} description="Dieses Quiz verfügt über verschiedene Eigentschaften. Insgesamt gibt es acht Fragen welche beantwortbar sind. Es gibt einen Timer der in jeder Frage läuft und nach Ablauf einen Punkt abzieht. Gleichzeitig erhält man für richtig beantwortete Fragen Punkte. Es ist möglich seinen Highscore pro Rund zu speichern" />
-    
-    
-    <ProjektSeparator head="P-2" project={<ToDo/>} description="Eine ToDo-Liste mit verschiedenen Eigenschaften. Unter anderem ist es möglich, ein Zieldatum einzugeben und auch eine Prio zu vergeben. Die erstellen Aufgaben können nach Datum oder Prio auf- und absteigend sortiert werden." />
    
- 
+  
 
+    <Navbarwithboots/>
+    <br></br>
+    
+    
+    <Skillsrefactor/>
+    <br></br>
+   
+    {/* <Aboutmewithbootsrap/> */}
+
+    
+    <ProjekteHead/>
+    <br></br>
+
+    <ProjektSeparator head="N-1 " project={<Quizapp/>} description="Dieses Quiz verfügt über verschiedene Eigentschaften. Insgesamt gibt es acht Fragen welche beantwortbar sind. Es gibt einen Timer der in jeder Frage läuft und nach Ablauf einen Punkt abzieht. Gleichzeitig erhält man für richtig beantwortete Fragen Punkte. Es ist möglich seinen Highscore pro Runde zu speichern" />
+    <br></br>
+    <ProjektSeparator head="N-2" project={<ToDo/>} description="Eine ToDo-Liste mit verschiedenen Eigenschaften. Unter anderem ist es möglich, ein Zieldatum einzugeben und auch eine Prio zu vergeben. Die erstellen Aufgaben können nach Datum oder Prio auf- und absteigend sortiert werden." />
+    <br></br>
+
+    
+
+
+
+     
+     <br></br><br></br><br></br><br></br><br></br><br></br>
+
+
+   
     
     <br></br>
     <br></br><br></br>
@@ -46,7 +67,7 @@ function App() {
    
 
 
-    <br></br><br></br><br></br><br></br><br></br><br></br>
+   
 
     <Footer/>
     <Switch>

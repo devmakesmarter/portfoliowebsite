@@ -9,13 +9,19 @@ html {
     font-size: 16px;
 }
 
+.zeropaddingandmargin87452187 {
+    padding: 0;
+    margin: 0;
+}
+
 .containercontainercontainercontainer {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 0.05rem;
-    border-style: solid;
+    border: 0.1rem;
+    /* border-style: solid;
     border-radius: 0.3rem;
+    border-color: rgba(0, 69, 165, 1); */
 }
 
 .containercontainercontainer {
@@ -121,14 +127,14 @@ html {
 }
 
 .buttonforsubmit {
-    background-color: #eb7864;
+    background-color: rgba(0, 69, 165, 1);
     border: 0.1rem;
     border-style: solid;
     border-radius: 0.5rem;
     width: 12rem;
     height: 5rem;
     font-weight: bold;
-    color: black;
+    color: white;
 }
 
 .containerfortheoutputsection {
@@ -239,14 +245,14 @@ html {
         color: black;
     }
     .buttonforsubmit {
-        background-color: #eb7864;
+        background-color: rgba(0, 69, 165, 1);
         border: 0.1rem;
         border-style: solid;
         border-radius: 0.5rem;
         width: 6rem;
         height: 2.5rem;
         font-weight: bold;
-        color: black;
+        color: white;
     }
     .containerfortheoutputsection {
         position: relative;

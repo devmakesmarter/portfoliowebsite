@@ -5,13 +5,14 @@ export  const ProjekteHead = () => {
 
 
   return (
-    <div>
+    <>
+    <div id="projektehead547126874"> 
       <div className="aprojektdescription" id="Projektbeginn" >
-    <h1>Projekte</h1>
-    <p></p>
-    
+      <h1>Projekte</h1>
+     
+      </div>
     </div>
-    </div>
+    </>
   )
 }
 

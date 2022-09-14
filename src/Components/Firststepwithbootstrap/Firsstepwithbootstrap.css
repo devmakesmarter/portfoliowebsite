@@ -1,0 +1,41 @@
+#caruselspeziale.container {}
+
+#caruselspeziale .myinput {
+    width: 100%;
+}
+
+#caruselspeziale .col0padding {
+    padding: 0;
+}
+
+.carousel {}
+
+.carousel.slide {}
+
+.carousel-inner {}
+
+
+/* GANZ GANZ wichtig!!!! dem Carousel eine Unique ID geben sonst gilt das für alle Carouselle*/
+
+#caruselspeziale img {
+    /* height: 100%; */
+    /* object-fit: cover;
+    position: center;
+    overflow: hidden; */
+}
+
+.d-block {}
+
+.spezialimgdiv.img {}
+
+.full {
+    /* position: absolute;
+    left: 0;
+    right: 0; */
+}
+
+.spezial {
+    min-width: 100%;
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
+}

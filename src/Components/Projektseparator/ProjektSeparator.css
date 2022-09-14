@@ -1,12 +1,39 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat', sans-serif;
-}
+#projectseparator238525 {}
 
 html {
     font-size: 16px;
+}
+
+#projectseparator238525 p {
+    font-size: clamp(0.3rem, 0.2rem + 2vw, 1rem);
+}
+
+.zeropaddingandmargin34253423 {
+    margin: 0;
+    padding: 0;
+}
+
+.borderforcallindiviual {
+    border: 0.1rem;
+    border-right: 0;
+    border-color: black;
+    border-style: solid;
+    background-color: rgb(248, 249, 250);
+}
+
+.borderforcallindiviualtwo {
+    border: 0.1rem;
+    border-left: 0;
+    border-color: black;
+    border-style: solid;
+    background-color: rgb(248, 249, 250);
+}
+
+.borderforcallindiviualthree {
+    border: 0.1rem;
+    border-top: 0;
+    border-color: black;
+    border-style: solid;
 }
 
 .wrapperofallwrapper {
@@ -31,12 +58,19 @@ html {
     justify-content: center;
     align-items: center;
     padding: 1rem;
-    border: 0.3rem;
+    border: 0.1rem;
+    border-color: black;
+    border-bottom: 0;
+    border-style: solid;
+    background-color: rgba(128, 128, 128, 0.3);
+}
+
+.headsectionbcv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-color: black;
     border-style: solid;
-    width: 100%;
-    border-bottom: 0;
-    max-height: 30%;
     background-color: rgba(128, 128, 128, 0.3);
 }
 
@@ -69,6 +103,10 @@ html {
     border-style: solid;
     width: 100%;
     min-height: 20rem;
+}
+
+#containerfromseperator789548791 p {
+    font-size: clamp(0.1rem, 0.2rem + 2vw, 1rem);
 }
 
 
