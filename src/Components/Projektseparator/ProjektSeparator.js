@@ -19,7 +19,7 @@ export  const ProjektSeparator = ({head, description, project}) => {
             <Col className="col-3 p-1 d-flex justify-content-center align-items-center  borderforcallindiviual "><h1 className="zeropaddingandmargin34253423"  >{head} </h1></Col>
             <Col className="col-9 p-1 borderforcallindiviualtwo  "  > <p className="zeropaddingandmargin34253423"> {description} </p> </Col>
           </Row>
-          <Row>
+          <Row className="">
             <Col className="col-12 d-flex  borderforcallindiviualthree justify-content-center align-items-center "> {project} </Col>
           </Row>
         </Container>

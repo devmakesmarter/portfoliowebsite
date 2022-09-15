@@ -17,7 +17,8 @@ import {Next} from "../Components/Nextstepwithbootstrap/Next";
 import {Skillsrefactor} from "../Components/Skillsrefactor/Skillsrefactor";
 import {Navbarwithboots} from "../Components/Navbarwithboots/Navbarwithboots";
 import {Aboutmewithbootsrap} from "../Components/Aboutmewithbootsrap/Aboutmewithbootsrap";
-
+import {UseRed} from "./UseReducer/UseRed";
+import {Calculator} from "../Components/Calculator/Calculator";
 function App() {
   return (
 
@@ -36,6 +37,7 @@ function App() {
     <Navbarwithboots/>
     <br></br>
     
+   
     
     <Skillsrefactor/>
     <br></br>
@@ -50,6 +52,7 @@ function App() {
     <br></br>
     <ProjektSeparator head="N-2" project={<ToDo/>} description="Eine ToDo-Liste mit verschiedenen Eigenschaften. Unter anderem ist es möglich, ein Zieldatum einzugeben und auch eine Prio zu vergeben. Die erstellen Aufgaben können nach Datum oder Prio auf- und absteigend sortiert werden." />
     <br></br>
+    <ProjektSeparator head="N-3 " project={<Calculator/>} description=" Bei diesem Projekt handelt es sich um einen Taschenrechner, welchen ich selbst programmiert habe. Eine Möglichkeit der Farbänderung wird aktuell noch programmiert. " />
 
     
 

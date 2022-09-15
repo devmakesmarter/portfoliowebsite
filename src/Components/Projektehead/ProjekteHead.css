@@ -4,7 +4,7 @@ html {
     font-size: 16px;
 }
 
-h1 {
+.specialh1tothis {
     font-size: clamp(1.5rem, 0.4rem + 2.5vw, 2rem);
 }
 
