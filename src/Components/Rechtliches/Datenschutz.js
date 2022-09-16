@@ -59,9 +59,10 @@ export const Datenschutz = () => {
 <p>Wir weisen darauf hin, dass die Datenübertragung im Internet (z. B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.</p>
 <h3 className="impressumstyle23456thetwo"    >Hinweis zur verantwortlichen Stelle</h3>
 <p>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p>
-<p>Ismail Erdogan Neukirchenerstr. 54 47829 Krefeld</p>
+<p>I/s?m/ail Er/do/g?an Neu?kir/chen?erstr. 54 47?829 Kref?eld</p>
+<p> Bitte entschuldigen Sie die Sonderzeichen in meinem Namen. Aber leider wird im Internet einfach mit meinem Angaben Verträge abgeschlossen. Durch die Sonderzeichen will das maschinelle Lesen verhindern</p>
 
-<p>Telefon: 015167440571<br /> E-Mail: erdogan.isma@gmail.com</p>
+<p>Telefon: 01/51??6744?05?71<br /> E-Mail: erdogan.isma @ gmail.com</p>
 <p>Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z. B. Namen, E-Mail-Adressen o. Ä.) entscheidet.</p>
 
 <h3 className="impressumstyle23456thetwo"   >Speicherdauer</h3>
@@ -261,9 +262,11 @@ export const Datenschutz = () => {
 <p>We herewith advise you that the transmission of data via the Internet (i.e., through e-mail communications) may be prone to security gaps. It is not possible to completely protect data against third-party access.</p>
 <h3  className="impressumstyle23456thetwo" >Information about the responsible party (referred to as the “controller” in the GDPR)</h3>
 <p>The data processing controller on this website is:</p>
-<p>Ismail Erdogan Neukirchenerstr. 54 47829 Krefeld</p>
+<p>Is?mail Erdo//gan Neukirch/ eners? tr. 54 478? 29 Kref? eld</p>
+<p>  Sry, for the Slashes and Question mark. But someone is grabing my Data on the Inet. I try to impede it with the Questionsmarks</p>
 
-<p>Phone: 015167440571<br /> E-mail: erdogan.isma@gmail.com</p>
+<p>Phone: 01??5167440??571<br /> E-mail: erdogan.isma @ gmail.com</p>
+<p>  Sry, for the Slashes and Question mark. But someone is grabing my Data on the Inet. I try to impede it with the Questionsmarks</p>
 <p>The controller is the natural person or legal entity that single-handedly or jointly with others makes decisions as to the purposes of and resources for the processing of personal data (e.g., names, e-mail addresses, etc.).</p>
 
 <h3 className="impressumstyle23456thetwo"   >Storage duration</h3>

@@ -8,7 +8,7 @@ export  const ProjekteHead = () => {
     <>
     <div id="projektehead547126874"> 
       <div className="aprojektdescription" id="Projektbeginn" >
-      <h1>Projekte</h1>
+      <h1 className="specialh1tothis">Projekte</h1>
      
       </div>
     </div>

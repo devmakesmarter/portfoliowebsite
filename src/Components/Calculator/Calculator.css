@@ -10,3 +10,13 @@
 .marginreducer784681377 {
     margin: 0;
 }
+
+#options5146531 {}
+
+.closed {
+    display: none;
+}
+
+.open {
+    display: flex;
+}

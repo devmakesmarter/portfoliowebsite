@@ -52,7 +52,7 @@ function App() {
     <br></br>
     <ProjektSeparator head="N-2" project={<ToDo/>} description="Eine ToDo-Liste mit verschiedenen Eigenschaften. Unter anderem ist es möglich, ein Zieldatum einzugeben und auch eine Prio zu vergeben. Die erstellen Aufgaben können nach Datum oder Prio auf- und absteigend sortiert werden." />
     <br></br>
-    <ProjektSeparator head="N-3 " project={<Calculator/>} description=" Bei diesem Projekt handelt es sich um einen Taschenrechner, welchen ich selbst programmiert habe. Eine Möglichkeit der Farbänderung wird aktuell noch programmiert. " />
+    <ProjektSeparator head="N-3 " project={<Calculator/>} description=" Bei diesem Projekt handelt es sich um einen Taschenrechner, welchen ich selbst programmiert habe. Zusätzlich zu den zuverlässigen und soliden Rechenfuntionen ist dieser individualisierbar. Es gibt insgesamt sechs unterschiedliche Farben. Bitte klicken Sie auf die Einstellungen. " />
 
     
 
