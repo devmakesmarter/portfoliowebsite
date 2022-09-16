@@ -8,28 +8,31 @@ import {COLORS} from "../Calculator/Data";
 export const Calculator = () => {
   
 
-    const [input, setInput] = useState("");
-    const [result, setResult] =useState("0");
-    const [colorrow, setColorRow]= useState(COLORS.body.rowblack);
-    const [colorhead, setColorHead] = useState(COLORS.head.yellow);
-    const [colorcol, setColorCol] = useState(COLORS.body.colblack);
-    const [coloroperators, setColorOperators] = useState(COLORS.body.coloperatorsblack);
-    const [buttoncol, setButtonCol] = useState(COLORS.body.buttonblack);
-    const [colorsettingsbody, setColorSettingsBody] = useState(COLORS.body.colorsettingsbodyblack)
+    const [input, setInput] = useState("");   // hier werden die jeweiligen Felder die angeklickt werden gespeichert
+    const [result, setResult] =useState("0"); // hier wird das Ergebnis gespeichert 
+    const [colorrow, setColorRow]= useState(COLORS.body.rowblack); // Farbe für die Rows. Bitte JSX beachten
+    const [colorhead, setColorHead] = useState(COLORS.head.yellow); // Frabe für den Bereich wo das Ergenis gelistet wird. 
+    const [colorcol, setColorCol] = useState(COLORS.body.colblack); // Farbe für die Columns im Eingabebereich
+    const [coloroperators, setColorOperators] = useState(COLORS.body.coloperatorsblack); // Farbe für die Rechenzeichen. Diese haben ein spezielles Layout
+    const [buttoncol, setButtonCol] = useState(COLORS.body.buttonblack); // Farbe für die Buttons im Bodybereich
+    const [colorsettingsbody, setColorSettingsBody] = useState(COLORS.body.colorsettingsbodyblack) // Farbe für den Colum der Einstellungen.
 
    
 
-   const operators = [".", "/","*","-","+"];
+   const operators = [".", "/","*","-","+"];// Das sind die Operatoren. Diese werden überprüft
 
+   // handleClick greift das Volumen der Buttons ab
    const handleClick = (e) => {
     var tar = e.target.value;
-
+    // Normalerweise kann als erstes Zeichen kein Operator kommen. Diese if-schleife lässt es zu, falls schon mal ein Ergenis ermittelt wurde. Somit kann man zum Ergebnis dazu rechnen
     if( operators.includes(tar) && input==="" && result !="0"){
         setInput((prev) => (prev + tar));
     }
+    // verhindert, dass das erste Zeichen ein Operator ist. Da die Ergebnisse als String "eval" addiert werden crasht es sonst
     if(operators.includes(tar) && input===""  ){
         return
     }
+    // Verhindert, dass zwei Operatoren eingegeben werden
     if(operators.includes(tar)&& operators.includes(input.slice(-1))){
         return
     }
@@ -37,17 +40,18 @@ export const Calculator = () => {
     setInput((prev) => (prev + tar))
     }
     }
-  
+    // Löscht die letzte Eingabe
    const handleDelete = () =>{
         setInput((prev)=>(
         prev.slice(0,-1)
         ))
    }
   
+   // Diese Funktion ist für das Berechnen der Ergebnisse verantwortlich
    const handleSum = () => {
-        if(operators.includes(input.slice(0,1)) && input != "" && result != "0"){
+        if(operators.includes(input.slice(0,1)) && input.length > 1 && result != "0"){
             setResult((prev)=> (
-                 eval(prev.toString() + input ) 
+                 eval(prev?.toString() + input ) 
             ));
             setInput("");
             }
@@ -74,6 +78,7 @@ export const Calculator = () => {
         setResult(0);
    }
 
+   // zuständig für die Faränderungen im Kopfbereich. Die entsprechenden Klassennamen sind im COLORS Object
    const handleHead = ({target}) => {
     const val = target.value;
     if(val === "yellow"){
@@ -96,7 +101,7 @@ export const Calculator = () => {
     }
     
    }
-
+    // zuständig für die Faränderungen im Bodybereich. Die entsprechenden Klassennamen sind im COLORS Object
    const handleBody = ({target}) => {
     const val = target.value;
     if(val === "yellow"){
@@ -146,10 +151,9 @@ export const Calculator = () => {
 
    };
 
+   // Zuständig für das öffnen und schliessen der Einstellungen
    const handleDisplayForSettings = () => {
 
-
-    
     console.log(document.getElementById("options5146531").className)
 
     if(document.getElementById("options5146531").classList.contains("closed")){
