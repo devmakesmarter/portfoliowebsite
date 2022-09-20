@@ -1,5 +1,6 @@
 
 import "../Rechtliches/Footer.css";
+import {withRouter} from 'react-router-dom';
 
 export const Impressum = () => {
 
@@ -47,3 +48,5 @@ return (
 
 
 }
+
+export default withRouter(Impressum);

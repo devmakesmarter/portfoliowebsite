@@ -1,4 +1,6 @@
 import "../Rechtliches/Footer.css";
+import { BrowserRouter as Router, Route, Switch, NavLink, Link } from "react-router-dom";
+import { LinkContainer } from 'react-router-bootstrap';
 
 export const Footer = () => {
 
@@ -11,16 +13,18 @@ export const Footer = () => {
 
 
     return (
-
+        
         <div> 
 
     <footer className="footerlinks">
+      
+       
     <nav>
         <ul>
-            <p><a href="/src/Components/Rechtliches/Impressum.js" target="_blank" >Impressum</a></p>
+            <p>  <Link to="/impressum">Impressum</Link></p>
         </ul>
         <ul>
-            <p><a href="/src/Components/Rechtliches/Datenschutz.js" target="_blank" >Datenschutz</a></p>
+            <p><NavLink to="/src/Components/Rechtliches/Datenschutz.js" >Datenschutz</NavLink></p>
         </ul>
         <ul> <p>  <a href="#"  onClick={() => window.openUcSettings()}>Cookie-Einstellungen</a></p></ul>
         
@@ -32,6 +36,7 @@ export const Footer = () => {
 </footer>
 
 </div>
+
     )
 
 }

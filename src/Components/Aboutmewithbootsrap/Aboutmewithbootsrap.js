@@ -5,6 +5,10 @@ import { Container, Row, Col, Carousel,Nav, Button,Navbar,NavDropdown, Card } fr
 import foto from "../Uebermich/Pictures/uebermich.jpg";
 import pictureone from "../Popup/pexels-lilartsy-1194775.jpg";
 import picturetwo from "../Firststepwithbootstrap/pexels-fleur-van-deijck-12857746.jpg";
+import { BrowserRouter as Router, Route, Switch, NavLink, Link } from "react-router-dom";
+import {Quizapp} from "../Quizapp/Quiz";
+import {ToDo} from "../../Components/ToDo/ToDo";
+import { Calculator } from '../Calculator/Calculator';
 
 
 export  const Aboutmewithbootsrap = () => {
@@ -12,92 +16,26 @@ export  const Aboutmewithbootsrap = () => {
     return (
    
    <>
-
+       
         <Container id="aboutmewithbootstrap89465648">
-            <Row>
-            <Carousel >
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={foto}
-          alt="First slide"
-        />
-        <Carousel.Caption>
-          <h5>First slide label</h5>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={pictureone}
-          alt="Second slide"
-        />
-        <Carousel.Caption>
-          <h5>Second slide label</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={picturetwo}
-          alt="Third slide"
-        />
-        <Carousel.Caption>
-          <h5>Third slide label</h5>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
-    
-            </Row>
-            <Row>
-            <Carousel variant="dark">
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={foto}
-          alt="First slide"
-        />
-        <Carousel.Caption>
-          <h5>First slide label</h5>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={pictureone}
-          alt="Second slide"
-        />
-        <Carousel.Caption>
-          <h5>Second slide label</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={picturetwo}
-          alt="Third slide"
-        />
-        <Carousel.Caption>
-          <h5>Third slide label</h5>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
-
-            </Row>
+        <Row>
+           <Col className="col-6"><Link to="/quiz">Quiz </Link> </Col><Col className="col-6"  ><Link to="/bonson">Taschedsffasdnrechner</Link></Col>
+           
+        </Row>
+        <Row>
+          <Route path="/quiz">
+            <Col className=" col-12 d-flex justify-content-center align-items-center"> <Quizapp/></Col>
+          </Route>
+          <Route path="/bonson">  
+            <Col className=" col d-flex justify-content-center align-items-center" ><Calculator/> </Col>
+            <Col className=" col d-flex justify-content-center align-items-center" ><Calculator/> </Col>
+          </Route>
+        </Row>
+         
 
         </Container>
 
-
+      
 
       
 

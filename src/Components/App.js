@@ -5,7 +5,7 @@ import { Navbartwo } from "./Navbartwo/Navbartwo";
 import {SkillsComponent} from "../Components/Skills/SkillsComponent";
 import {Quizapp} from "../Components/Quizapp/Quiz";
 import {Impressum} from "./Rechtliches/Impressum";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, NavLink, Link, withRouter } from "react-router-dom";
 import { Datenschutz } from "./Rechtliches/Datenschutz";
 import {Footer} from "../Components/Rechtliches/Footer";
 import {Uebermich} from "../Components/Uebermich/Uebermich";
@@ -19,6 +19,8 @@ import {Navbarwithboots} from "../Components/Navbarwithboots/Navbarwithboots";
 import {Aboutmewithbootsrap} from "../Components/Aboutmewithbootsrap/Aboutmewithbootsrap";
 import {UseRed} from "./UseReducer/UseRed";
 import {Calculator} from "../Components/Calculator/Calculator";
+import {Firstshop} from "../Components/FirstShop/Firstshop";
+
 function App() {
   return (
 
@@ -42,8 +44,10 @@ function App() {
     <Skillsrefactor/>
     <br></br>
    
-    {/* <Aboutmewithbootsrap/> */}
+   <Firstshop/>
 
+    {/*<Aboutmewithbootsrap/> 
+*/}
     
     <ProjekteHead/>
     <br></br>
@@ -73,15 +77,16 @@ function App() {
    
 
     <Footer/>
-    <Switch>
-    <Route exact path="/src/Components/Rechtliches/Impressum.js">
+   
+    <Switch>   
+    <Route exact path="/impressum">
       <Impressum/>
     </Route>
-    <Route exact path="/src/Components/Rechtliches/Datenschutz.js">
+    <Route  path="/src/Components/Rechtliches/Datenschutz.js">
       <Datenschutz/>
     </Route>
     </Switch>
-  
+    
 
     
     </div>
