@@ -87,10 +87,11 @@ export const Firstshop = () => {
         <Row>
             <Col className="col-12"><Header/></Col>
         </Row>
+        <Switch> 
         <Route  exact path="/"> 
-            <Redirect to="/shophome" ></Redirect>
+        <Home/>            {/* <Redirect to="/shophome" ></Redirect> */}
         </Route>
-        <Route   path="/shophome"> 
+        <Route   path="/shophome"> {/* Das zweite mal ist die Komponente, damit wenn es im Nav angeglickt ist auch schwarz ist */}
             <Home/>
         </Route>
         <Route  path="/shoppingoverview"> 
@@ -108,6 +109,7 @@ export const Firstshop = () => {
              <Productoverviewtech handlePrice={handlePrice} shoppingcart={shoppingcart} imgone={Techdata[0]?.img} imgtwo={Techdata[1]?.img} imgthree={Techdata[2].img} descriptionone={Techdata[0].description} 
               descriptiontwo={Techdata[1].description} descriptionthree={Techdata[2].description} priceone={Techdata[0].price} pricetwo={Techdata[1].price} pricethree={Techdata[2].price} />
         </Route>
+        </Switch>
      </Container> 
     </>
   )
