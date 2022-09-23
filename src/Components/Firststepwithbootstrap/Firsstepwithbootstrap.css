@@ -8,9 +8,9 @@
     padding: 0;
 }
 
-.carousel {}
+#caruselspeziale.carousel {}
 
-.carousel.slide {}
+#caruselspeziale.carousel.slide {}
 
 .carousel-inner {}
 
@@ -18,13 +18,11 @@
 /* GANZ GANZ wichtig!!!! dem Carousel eine Unique ID geben sonst gilt das für alle Carouselle*/
 
 #caruselspeziale img {
-    /* height: 100%; */
-    /* object-fit: cover;
+    height: 100%;
+    object-fit: cover;
     position: center;
-    overflow: hidden; */
+    overflow: hidden;
 }
-
-.d-block {}
 
 .spezialimgdiv.img {}
 

@@ -1,0 +1,27 @@
+#containerforproduct5498131 {
+    margin-top: 6px;
+}
+
+#containerforproduct5498131 img {
+    /*  max-height: 500px;
+    object-fit: cover;
+    position: center;
+    overflow: hidden;
+
+    */
+}
+
+.allal {
+    height: 200px;
+}
+
+#containerforproduct5498131 .nomargin {
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .spezialformobile {
+        min-height: 100px;
+    }
+}
