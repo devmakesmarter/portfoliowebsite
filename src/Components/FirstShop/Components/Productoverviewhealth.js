@@ -6,7 +6,7 @@ import {Shoppingcart} from "../Components/Shoppingcart";
 
 import {Product} from "./Product";
 
-export const Productoverviewhealth = ({imgone, imgtwo, imgthree, descriptionone,descriptiontwo,descriptionthree, priceone,pricetwo,pricethree,shoppingcart,handlePrice}) => {
+export const Productoverviewhealth = ({imgone, imgtwo, imgthree, descriptionone,descriptiontwo,descriptionthree, priceone,pricetwo,pricethree,shoppingcart,handlePrice, handleNavigation}) => {
 
   // Entsprechend den Reitern der NavListe gibt es diese Productoverview. Gleichzeitg dienen dieser Componenten auch zum Routen. Es wird hier in geroutet und 
   // von hier werden alle Produkte der Kategorie gelistet
@@ -14,9 +14,9 @@ export const Productoverviewhealth = ({imgone, imgtwo, imgthree, descriptionone,
   return (
     <>
         <Row >
-            <Col className="col-6 col-md-4"><Product id="6" handlePrice={handlePrice} img={imgone} description={descriptionone} price={priceone}/></Col>
-            <Col className="col-6 col-md-4"><Product id="7" handlePrice={handlePrice} img={imgtwo} description={descriptiontwo} price={pricetwo}/></Col>
-            <Col className="col-6 col-md-4"><Product id="8" handlePrice={handlePrice} img={imgthree} description={descriptionthree} price={pricethree}/></Col>
+            <Col className="col-6 col-md-4"><Product id="6" handleNavigation={handleNavigation} handlePrice={handlePrice} img={imgone} description={descriptionone} price={priceone}/></Col>
+            <Col className="col-6 col-md-4"><Product id="7" handleNavigation={handleNavigation} handlePrice={handlePrice} img={imgtwo} description={descriptiontwo} price={pricetwo}/></Col>
+            <Col className="col-6 col-md-4"><Product id="8" handleNavigation={handleNavigation} handlePrice={handlePrice} img={imgthree} description={descriptionthree} price={pricethree}/></Col>
         </Row>
         <Shoppingcart shoppingcart={shoppingcart}/>
     </>
