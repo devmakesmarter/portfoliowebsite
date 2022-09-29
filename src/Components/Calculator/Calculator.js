@@ -24,20 +24,24 @@ export const Calculator = () => {
    // handleClick greift das Volumen der Buttons ab
    const handleClick = (e) => {
     var tar = e.target.value;
+    
+    
     // Normalerweise kann als erstes Zeichen kein Operator kommen. Diese if-schleife lässt es zu, falls schon mal ein Ergenis ermittelt wurde. Somit kann man zum Ergebnis dazu rechnen
-    if( operators.includes(tar) && input==="" && result !="0"){
+    if( operators.includes(tar) && input==="" && result !=""){
         setInput((prev) => (prev + tar));
+       
     }
     // verhindert, dass das erste Zeichen ein Operator ist. Da die Ergebnisse als String "eval" addiert werden crasht es sonst
-    if(operators.includes(tar) && input===""  ){
+     else if(operators.includes(tar) && input===""  ){
         return
     }
     // Verhindert, dass zwei Operatoren eingegeben werden
-    if(operators.includes(tar)&& operators.includes(input.slice(-1))){
+     else if(operators.includes(tar)&& operators.includes(input.slice(-1))){
         return
     }
     else{
     setInput((prev) => (prev + tar))
+    
     }
     }
     // Löscht die letzte Eingabe
@@ -62,7 +66,7 @@ export const Calculator = () => {
     
 
         else if(!operators.includes(input.slice(-1)) && input != "" ){
-            console.log("b")
+            
             setResult(eval(input));
             setInput("");
             }
@@ -75,7 +79,7 @@ export const Calculator = () => {
 
    const handleReset = () => {
         setInput("");
-        setResult(0);
+        setResult("0");
    }
 
    // zuständig für die Faränderungen im Kopfbereich. Die entsprechenden Klassennamen sind im COLORS Object
@@ -154,7 +158,7 @@ export const Calculator = () => {
    // Zuständig für das öffnen und schliessen der Einstellungen
    const handleDisplayForSettings = () => {
 
-    console.log(document.getElementById("options5146531").className)
+    
 
     if(document.getElementById("options5146531").classList.contains("closed")){
     
@@ -203,7 +207,7 @@ export const Calculator = () => {
             </Col>
         </Row>
         <Row className={colorrow}    > 
-            <Col className={colorcol} ><Button className={buttoncol} value={0}  >0</Button></Col>
+            <Col className={colorcol} ><Button className={buttoncol} onClick={handleClick} value={0}  >0</Button></Col>
             <Col className={colorcol} ><Button className={buttoncol} onClick={handleClick} value="." >.</Button></Col>
             <Col className={colorcol} ><Button className={buttoncol} onClick={handleSum}  >=</Button></Col>
             <Col className=" col-3 bg-dark" >
